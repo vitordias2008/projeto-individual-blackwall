@@ -1,7 +1,7 @@
 
 <div align="center">
 
-<img src="./assets/blackwall-banner.gif" alt="BLACKWALL — Projeto Individual de PI" width="100%" />
+<img src="./readme-blackwall/assets/blackwall-banner.gif" alt="BLACKWALL — Projeto Individual de PI" width="100%" />
 
 <br />
 
