@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- navbar -->
+    <!-- Navbar aprovada: os outros links terão suas seções nos próximos commits. -->
     <header class="site-nav">
         <a class="brand" href="#inicio">BW_</a>
         <nav aria-label="Navegação principal">
@@ -22,13 +22,73 @@
     </header>
 
     <main>
-        <!-- tela inicial -->
+        <!-- 01. Capa Blackwall -->
         <section class="hero" id="inicio">
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <h1><img src="assets/logo_blackwall.png" alt="BLACKWALL"></h1>
                 <p class="hero-subtitle">/ ARQUIVOS DE NIGHT CITY /</p>
                 <a class="btn-red" href="#portais">INICIAR ACESSO</a>
+            </div>
+            <div class="hero-bottom-glitch" aria-hidden="true"></div>
+        </section>
+
+        <!-- 02. Três caminhos para conhecer o universo -->
+        <section class="portais" id="portais" aria-labelledby="titulo-portais">
+            <p class="portais-etiqueta">// ARQUIVOS DE NIGHT CITY</p>
+            <h2 id="titulo-portais" class="portais-titulo">
+                <img src="assets/logo_blackwall.png" alt="BLACKWALL">
+            </h2>
+
+            <div class="banners">
+                <article class="banner banner-lateral">
+                    <a href="#cyberpunk" aria-label="Conhecer o universo Cyberpunk">
+                        <img src="assets/banner_cyberpunk.webp" alt="Arte amarela de Cyberpunk 2077" loading="lazy">
+                    </a>
+                    <p>Em Night City, a tecnologia muda a vida das pessoas. Conheça o universo de Cyberpunk 2077.</p>
+                </article>
+
+                <article class="banner banner-principal">
+                    <a href="#blackwall" aria-label="Entender a Blackwall">
+                        <img src="assets/banner_blackwall.webp" alt="Figura digital vermelha da Blackwall" loading="lazy">
+                    </a>
+                    <p>A Blackwall é uma barreira digital criada para separar a rede humana de inteligências artificiais fora de controle.</p>
+                </article>
+
+                <article class="banner banner-lateral">
+                    <a href="#trajetoria" aria-label="Conhecer Minha Conexão">
+                        <img src="assets/banner_minha_conexao.webp" alt="Banner Minha Conexão, com Johnny ao lado de um carro" loading="lazy">
+                    </a>
+                    <p>Uma história pode marcar a nossa vida. Aqui conto como Cyberpunk se conecta à minha trajetória.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 03. Interativos: conteúdo provisório, sem JavaScript -->
+        <section class="interativos" id="interativos" aria-labelledby="titulo-interativos">
+            <div class="interativos-conteudo">
+                <p class="interativos-etiqueta">// 003 &nbsp; EXPERIÊNCIAS INTERATIVAS</p>
+                <h2 id="titulo-interativos">Interaja com a gente</h2>
+                <p>Conheça Night City de outras formas. Em breve, você poderá explorar experiências interativas por aqui.</p>
+
+                <!-- HTML nativo: clique para expandir; clique novamente para recolher. -->
+                <details class="interativos-expansao">
+                    <summary>Explorar partes interativas <span aria-hidden="true">+</span></summary>
+                    <div class="interativos-lista">
+                        <article class="interativo-card">
+                            <span class="interativo-tipo">// CYBERPUNK</span>
+                            <h3>Explore Night City</h3>
+                            <p>Espaço reservado para quizzes, escolhas e outros minigames.</p>
+                            <span class="em-breve">EM BREVE</span>
+                        </article>
+                        <article class="interativo-card">
+                            <span class="interativo-tipo">// BLACKWALL</span>
+                            <h3>Além da barreira</h3>
+                            <p>Espaço reservado para experiências relacionadas à Blackwall.</p>
+                            <span class="em-breve">EM BREVE</span>
+                        </article>
+                    </div>
+                </details>
             </div>
         </section>
     </main>

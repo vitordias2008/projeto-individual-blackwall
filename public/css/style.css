@@ -143,3 +143,119 @@ img { display: block; max-width: 100%; }
     from { opacity: .75; }
     to   { opacity: 1; }
 }
+@keyframes interferencia {
+    from { opacity: .45; background-position: 47% bottom; }
+    to   { opacity: .85; background-position: 53% bottom; }
+}
+
+/* Respeita dispositivos configurados para reduzir movimento. */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* COMMIT 03 — Banners principais
+   Ajuste estas três medidas para mudar o tamanho dos banners. */
+:root {
+    --banner-lateral: 340px;
+    --banner-central: 390px;
+    --espaco-banners: 28px;
+}
+
+.portais {
+    min-height: 100svh;
+    padding: 100px 24px 115px;
+    text-align: center;
+    background: linear-gradient(#22050c, #04131a 24%);
+}
+.portais-etiqueta {
+    margin: 0 0 18px;
+    color: #d67c87;
+    font-size: 11px;
+    letter-spacing: .18em;
+}
+.portais-titulo { margin: 0 auto 58px; }
+.portais-titulo img { width: min(320px, 70vw); height: auto; margin: auto; }
+.banners {
+    display: grid;
+    grid-template-columns: var(--banner-lateral) var(--banner-central) var(--banner-lateral);
+    justify-content: center;
+    align-items: center;
+    gap: var(--espaco-banners);
+    max-width: 100%;
+    margin: 0 auto;
+}
+.banner { min-width: 0; }
+.banner a { display: block; overflow: hidden; background: #08090a; }
+.banner img { display: block; width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: cover; transition: transform .35s ease; }
+.banner a:hover img, .banner a:focus-visible img { transform: scale(1.035); }
+.banner p { max-width: 32ch; margin: 18px auto 0; color: #c8d6d9; font-size: 13px; line-height: 1.65; }
+
+@media (max-width: 1200px) {
+    .banners { grid-template-columns: 1fr 1.15fr 1fr; max-width: 980px; }
+}
+@media (max-width: 760px) {
+    .portais { padding: 88px 20px 95px; }
+    .portais-titulo { margin-bottom: 40px; }
+    .banners { display: flex; flex-direction: column; gap: 36px; }
+    .banner { width: min(100%, 340px); }
+    .banner-principal { width: min(100%, 380px); order: -1; }
+    .banner p { font-size: 13px; }
+}
+
+/* COMMIT 04 — Interativos provisórios.
+   O botão abre e fecha a área usando <details>, sem JavaScript. */
+.interativos {
+    padding: 85px 24px 100px;
+    background: #04131a;
+    text-align: center;
+}
+.interativos-conteudo { max-width: 960px; margin: auto; }
+.interativos-etiqueta {
+    color: #c44e65;
+    font-size: 11px;
+    letter-spacing: .16em;
+}
+.interativos h2 { margin: 16px 0; font-size: clamp(26px, 3vw, 39px); }
+.interativos-conteudo > p:not(.interativos-etiqueta) {
+    max-width: 56ch;
+    margin: 0 auto 30px;
+    color: #c8d6d9;
+    font-size: 14px;
+    line-height: 1.7;
+}
+.interativos-expansao summary {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 15px 23px;
+    border: 1px solid #da2444;
+    color: #f1e9e9;
+    background: #2a0b13;
+    cursor: pointer;
+    list-style: none;
+    font-size: 13px;
+}
+.interativos-expansao summary::-webkit-details-marker { display: none; }
+.interativos-expansao summary:hover { background: #4b1020; }
+.interativos-expansao[open] summary span { transform: rotate(45deg); }
+.interativos-lista {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    margin-top: 32px;
+    text-align: left;
+}
+.interativo-card { padding: 30px; border: 1px solid #28505a; background: #081b23; }
+.interativo-card:nth-child(2) { border-color: #883144; background: #210d15; }
+.interativo-tipo, .em-breve { font-size: 11px; letter-spacing: .14em; color: #ff536c; }
+.interativo-card h3 { margin: 12px 0; font-size: 21px; }
+.interativo-card p { margin: 0 0 25px; font-size: 13px; line-height: 1.65; color: #c8d6d9; }
+.em-breve { color: #9bb6bd; }
+@media (max-width: 760px) {
+    .interativos { padding: 70px 20px 85px; }
+    .interativos-lista { grid-template-columns: 1fr; }
+}
