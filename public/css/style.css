@@ -1,6 +1,145 @@
-/* Estilos iniciais do projeto BLACKWALL */
+/* BLACKWALL // Commit 02 — Capa e navbar */
+:root {
+    --fundo: #04131a;
+    --texto: #f0f2eb;
+    --altura-capa: 100vh;
+}
 
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--fundo); color: var(--texto); font-family: Arial, sans-serif; }
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+
+/* Navbar: mesmo visual da homepage aprovada */
+.site-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 34px;
+    background: linear-gradient(180deg, #02070ccc, #02070c80, transparent);
+}
+.site-nav .brand { font-size: 20px; font-weight: 700; letter-spacing: .075em; }
+.site-nav nav { display: flex; gap: 22px; flex-wrap: wrap; justify-content: flex-end; }
+.site-nav nav a { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: #d9e3e5; }
+
+/* Capa */
+.hero {
+    position: relative;
+    min-height: var(--altura-capa);
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 110px;
+    text-align: center;
+    background: url("../assets/capa_blackwall.webp") center / cover no-repeat;
+}
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #03060a73, #03060a33 28%, #03060a47 72%, #0004);
+}
+.hero-content { position: relative; z-index: 1; width: min(100%, 820px); }
+.hero h1 { margin: 0; }
+.hero h1 img { width: min(82vw, 620px); height: auto; margin: 0 auto; }
+.hero-subtitle { margin: 22px 0 28px; font-size: 14px; letter-spacing: .48em; text-transform: uppercase; }
+.btn-red {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0 22px;
+    font-size: 12px;
+    letter-spacing: .08em;
+    background: #ce1632;
+    border: 1px solid #ef3e5d;
+}
+.hero-bottom-glitch {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 13px;
+    background: url("../assets/faixa_cidade_vermelha.webp") center bottom / auto 90px no-repeat;
+    opacity: .7;
+}
+
+/* Ajustes para celular */
+@media (max-width: 760px) {
+    .site-nav { padding: 14px 16px; flex-direction: column; align-items: flex-start; gap: 10px; }
+    .site-nav nav { gap: 10px 14px; }
+    .site-nav nav a { font-size: 10px; }
+    .hero { min-height: 760px; padding-top: 140px; }
+    .hero h1 img { width: min(88vw, 520px); }
+    .hero-subtitle { font-size: 11px; letter-spacing: .28em; }
+}
+
+/* ANIMAÇÕES — altere os tempos aqui, se quiser. */
+:root {
+    --entrada: .8s;
+    --movimento-luz: 7s;
+}
+
+/* Entrada suave da capa, uma vez ao carregar. */
+.hero h1 {
+    animation: entrarDeBaixo var(--entrada) ease-out both;
+}
+.hero-subtitle {
+    animation: entrarDeBaixo var(--entrada) ease-out .18s both;
+}
+.btn-red {
+    animation: entrarDeBaixo var(--entrada) ease-out .35s backwards;
+    transition: background .2s, box-shadow .2s, transform .2s;
+}
+.btn-red:hover,
+.btn-red:focus-visible {
+    background: #e52443;
+    box-shadow: 0 0 24px #e5244366;
+    transform: translateY(-3px);
+}
+
+/* Iluminação vermelha muito sutil sobre a imagem da capa. */
+.hero-overlay {
+    pointer-events: none;
+    background:
+        radial-gradient(circle at 65% 55%, #de10251c, transparent 48%),
+        linear-gradient(180deg, #03060a73, #03060a33 28%, #03060a47 72%, #0004);
+    animation: luzDaCapa var(--movimento-luz) ease-in-out infinite alternate;
+}
+
+/* Efeito de hover no menu — mantém o visual e o tamanho da navbar. */
+.site-nav nav a {
+    transition: color .2s;
+}
+.site-nav nav a:hover,
+.site-nav nav a:focus-visible {
+    color: #ffffff;
+}
+.site-nav .brand {
+    transition: color .2s, text-shadow .2s;
+}
+.site-nav .brand:hover,
+.site-nav .brand:focus-visible {
+    color: #fff;
+    text-shadow: 0 0 12px #f22d4b99;
+}
+
+/* A linha de interferência se movimenta sem mudar a altura. */
+.hero-bottom-glitch {
+    animation: interferencia 5s ease-in-out infinite alternate;
+}
+
+@keyframes entrarDeBaixo {
+    from { opacity: 0; transform: translateY(22px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes luzDaCapa {
+    from { opacity: .75; }
+    to   { opacity: 1; }
 }
