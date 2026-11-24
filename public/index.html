@@ -1,98 +1,197 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#06141a">
-    <title>BLACKWALL // Arquivos de Night City</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#06141a">
+  <meta name="description" content="BLACKWALL // Arquivos de Night City">
+  <title>BLACKWALL // Arquivos de Night City</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navbar aprovada: os outros links terão suas seções nos próximos commits. -->
-    <header class="site-nav">
-        <a class="brand" href="#inicio">BW_</a>
-        <nav aria-label="Navegação principal">
-            <a href="#inicio">Início</a>
-            <a href="#portais">Arquivos</a>
-            <a href="#blackwall">Blackwall</a>
-            <a href="#cyberpunk">Cyberpunk</a>
-            <a href="#interativos">Interativos</a>
-            <a href="#trajetoria">Minha trajetória</a>
-        </nav>
-    </header>
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
-    <main>
-        <!-- 01. Capa Blackwall -->
-        <section class="hero" id="inicio">
-            <div class="hero-overlay"></div>
-            <div class="hero-content">
-                <h1><img src="assets/logo_blackwall.png" alt="BLACKWALL"></h1>
-                <p class="hero-subtitle">/ ARQUIVOS DE NIGHT CITY /</p>
-                <a class="btn-red" href="#portais">INICIAR ACESSO</a>
+  <header class="site-nav">
+    <a class="brand" href="#inicio">BW_</a>
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#portais">Arquivos</a>
+      <a href="#blackwall">Blackwall</a>
+      <a href="#cyberpunk">Cyberpunk</a>
+      <a href="#interativos">Interativos</a>
+      <a href="#trajetoria">Minha trajetória</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1 id="hero-title"><img src="assets/logo_blackwall.png" alt="BLACKWALL"></h1>
+        <p class="hero-subtitle">/ ARQUIVOS DE NIGHT CITY /</p>
+        <a class="btn btn-red" href="#portais">INICIAR ACESSO</a>
+      </div>
+      <div class="hero-bottom-glitch"></div>
+    </section>
+
+    <section class="portals section" id="portais">
+      <div class="container">
+        <p class="section-eyebrow portals-eyebrow">// ARQUIVOS DE NIGHT CITY</p>
+        <h2 class="section-logo"><img src="assets/logo_blackwall.png" alt="BLACKWALL"></h2>
+        <div class="portal-grid">
+          <article class="portal side">
+            <a class="poster" href="#cyberpunk"><img src="assets/banner_cyberpunk.webp" alt="Banner Cyberpunk"></a>
+            <p>Em Night City, tecnologia e sobrevivência caminham juntas. Conheça o universo de Cyberpunk 2077.</p>
+          </article>
+
+          <article class="portal main">
+            <a class="poster" href="#blackwall"><img src="assets/banner_blackwall.webp" alt="Banner Blackwall"></a>
+            <p>A Blackwall é a fronteira digital que separa a rede conhecida do que existe além dela.</p>
+          </article>
+
+          <article class="portal side">
+            <a class="poster" href="#trajetoria"><img src="assets/banner_minha_conexao.webp" alt="Banner Minha Conexão"></a>
+            <p>Um espaço para mostrar como esse universo se conecta à minha trajetória e às pessoas ao meu redor.</p>
+          </article>
+        </div>
+      </div>
+      <div class="divider-skyline"></div>
+    </section>
+
+    <section class="interactive section" id="interativos">
+      <div class="container interactive-container">
+        <details class="interactive-details">
+          <summary>INTERAJA COM A GENTE</summary>
+          <div class="interactive-grid">
+            <div class="interactive-card">
+              <span>// CYBERPUNK</span>
+              <h3>Em breve</h3>
+              <p>Espaço reservado para quizzes, mapas, escolhas e minigames do universo Cyberpunk.</p>
             </div>
-            <div class="hero-bottom-glitch" aria-hidden="true"></div>
-        </section>
-
-        <!-- 02. Três caminhos para conhecer o universo -->
-        <section class="portais" id="portais" aria-labelledby="titulo-portais">
-            <p class="portais-etiqueta">// ARQUIVOS DE NIGHT CITY</p>
-            <h2 id="titulo-portais" class="portais-titulo">
-                <img src="assets/logo_blackwall.png" alt="BLACKWALL">
-            </h2>
-
-            <div class="banners">
-                <article class="banner banner-lateral">
-                    <a href="#cyberpunk" aria-label="Conhecer o universo Cyberpunk">
-                        <img src="assets/banner_cyberpunk.webp" alt="Arte amarela de Cyberpunk 2077" loading="lazy">
-                    </a>
-                    <p>Em Night City, a tecnologia muda a vida das pessoas. Conheça o universo de Cyberpunk 2077.</p>
-                </article>
-
-                <article class="banner banner-principal">
-                    <a href="#blackwall" aria-label="Entender a Blackwall">
-                        <img src="assets/banner_blackwall.webp" alt="Figura digital vermelha da Blackwall" loading="lazy">
-                    </a>
-                    <p>A Blackwall é uma barreira digital criada para separar a rede humana de inteligências artificiais fora de controle.</p>
-                </article>
-
-                <article class="banner banner-lateral">
-                    <a href="#trajetoria" aria-label="Conhecer Minha Conexão">
-                        <img src="assets/banner_minha_conexao.webp" alt="Banner Minha Conexão, com Johnny ao lado de um carro" loading="lazy">
-                    </a>
-                    <p>Uma história pode marcar a nossa vida. Aqui conto como Cyberpunk se conecta à minha trajetória.</p>
-                </article>
+            <div class="interactive-card">
+              <span>// BLACKWALL</span>
+              <h3>Em breve</h3>
+              <p>Espaço reservado para experiências sobre a Blackwall, IAs e eventos do outro lado da rede.</p>
             </div>
-        </section>
+          </div>
+        </details>
+      </div>
+    </section>
 
-        <!-- 03. Interativos: conteúdo provisório, sem JavaScript -->
-        <section class="interativos" id="interativos" aria-labelledby="titulo-interativos">
-            <div class="interativos-conteudo">
-                <p class="interativos-etiqueta">// 003 &nbsp; EXPERIÊNCIAS INTERATIVAS</p>
-                <h2 id="titulo-interativos">Interaja com a gente</h2>
-                <p>Conheça Night City de outras formas. Em breve, você poderá explorar experiências interativas por aqui.</p>
+    <section class="barrier section" id="blackwall" aria-labelledby="blackwall-title">
+      <div class="container barrier-wrap">
+        <div class="barrier-copy">
+          <p class="section-eyebrow blackwall-eyebrow">// A FRONTEIRA DA REDE</p>
+          <img class="mini-logo blackwall-mini" src="assets/logo_blackwall.png" alt="BLACKWALL">
+          <h2 id="blackwall-title">A barreira entre controle<br>e o desconhecido</h2>
+          <p>Após o colapso da antiga rede, a Blackwall foi criada para separar a parte monitorada daquilo que já não responde mais à lógica humana.</p>
+          <p>Mais do que um sistema de defesa, ela representa o limite entre aquilo que ainda controlamos e aquilo que existe além da nossa compreensão.</p>
+          <a class="btn btn-outline" href="#cyberpunk">Descubra</a>
+        </div>
+      </div>
+      <div class="divider-skyline divider-skyline-top"></div>
+    </section>
 
-                <!-- HTML nativo: clique para expandir; clique novamente para recolher. -->
-                <details class="interativos-expansao">
-                    <summary>Explorar partes interativas <span aria-hidden="true">+</span></summary>
-                    <div class="interativos-lista">
-                        <article class="interativo-card">
-                            <span class="interativo-tipo">// CYBERPUNK</span>
-                            <h3>Explore Night City</h3>
-                            <p>Espaço reservado para quizzes, escolhas e outros minigames.</p>
-                            <span class="em-breve">EM BREVE</span>
-                        </article>
-                        <article class="interativo-card">
-                            <span class="interativo-tipo">// BLACKWALL</span>
-                            <h3>Além da barreira</h3>
-                            <p>Espaço reservado para experiências relacionadas à Blackwall.</p>
-                            <span class="em-breve">EM BREVE</span>
-                        </article>
-                    </div>
-                </details>
+    <section class="cyberpunk section" id="cyberpunk" aria-labelledby="cyberpunk-title">
+      <div class="cyberpunk-copy">
+        <p class="eyebrow">// O UNIVERSO <span>CYBERPUNK 2077</span></p>
+        <img class="mini-logo cyberpunk-mini" src="assets/logo_cyberpunk.png" alt="Cyberpunk 2077">
+        <h2 id="cyberpunk-title" class="cyberpunk-title">O futuro chegou.</h2>
+        <p class="cyberpunk-lead">Tecnologia, poder e humanidade em conflito.</p>
+        <p>Cyberpunk é um universo de futuros tecnológicos em que grandes corporações acumulam poder, enquanto pessoas comuns tentam encontrar seu lugar.</p>
+        <p>Em <strong>Night City</strong>, implantes modificam o corpo e a tecnologia faz parte de quase tudo. Mas, por trás das luzes e das máquinas, as histórias continuam sendo sobre escolhas, liberdade e sobrevivência.</p>
+        <a class="btn btn-cyberpunk" href="#historias">Conhecer o universo <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="cyberpunk-art">
+        <img src="assets/arte_cyberpunk_moto.webp" alt="Arte Cyberpunk com personagem em moto">
+      </div>
+    </section>
+
+    <section class="stories section" id="historias">
+      <div class="stories-media">
+        <img src="assets/historias_night_city.webp" alt="David e Lucy observando Night City">
+      </div>
+      <div class="stories-copy">
+        <p class="stories-kicker">// MINHA CONEXÃO</p>
+        <h2>Algumas histórias<br>ficam com a gente.</h2>
+        <p>Para mim, começou com Edgerunners. Entre os sonhos de David e Lucy, encontrei uma história que continuou comigo depois do último episódio.</p>
+        <p>Mais do que a cidade e a tecnologia, foram os vínculos, as escolhas e a vontade de pertencer que me aproximaram desse universo.</p>
+        <p>BLACKWALL nasceu dessa conexão: transformar o que uma história despertou em algo que outras pessoas possam explorar.</p>
+        <a class="btn btn-dark" href="#trajetoria">Minha conexão</a>
+      </div>
+    </section>
+
+    <section class="trajectory section" id="trajetoria" aria-labelledby="trajetoria-title">
+      <div class="container trajectory-head">
+        <p class="section-eyebrow trajectory-eyebrow">// CONEXÃO SOCIOEMOCIONAL</p>
+        <p class="trajectory-overline">PESSOAS QUE FIZERAM PARTE DA</p>
+        <h2 id="trajetoria-title">MINHA TRAJETÓRIA</h2>
+      </div>
+
+      <!-- Carrossel CSS puro, sem lógica no JavaScript. Fotos/narrativas definitivas pendentes. -->
+      <div class="trajectory-carousel">
+        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-1" checked>
+        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-2">
+        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-3">
+
+        <article class="trajectory-card profile-one" aria-label="Meu irmão">
+          <div class="trajectory-card-top"><span>BLACKWALL PROJEKT</span><span aria-hidden="true">◉</span></div>
+          <div class="trajectory-card-body">
+            <div class="trajectory-image">
+              <img src="assets/card_referencia_provisorio.webp" alt="Imagem provisória usada apenas como referência do layout do carrossel">
+              <span class="photo-indicator">IMAGEM PROVISÓRIA — FOTO PENDENTE</span>
             </div>
-        </section>
-    </main>
+            <div class="trajectory-info">
+              <span class="name-kicker">// ARQUIVO PESSOAL 01</span>
+              <h3>MEU IRMÃO</h3>
+              <p class="relation">FAMÍLIA · RPG · CYBERPUNK</p>
+              <p>Meu irmão tem um papel importante na minha conexão com Cyberpunk. Foi com ele que explorei mais o RPG e passei a conhecer outras partes desse universo, além do anime e do jogo. Essa troca de interesses e histórias ajudou a transformar algo de que gosto em um projeto pessoal.</p>
+              <details class="person-details"><summary>Conheça mais <span aria-hidden="true">↗</span></summary><p>Compartilhar esse universo com meu irmão é parte do motivo pelo qual quis criar o BLACKWALL: apresentar a outras pessoas um pouco das histórias e ideias que despertaram meu interesse.</p></details>
+            </div>
+          </div>
+          <div class="trajectory-card-bottom">ARQUIVO PESSOAL // MEU IRMÃO <span aria-hidden="true">↥</span></div>
+          <label class="arrow-btn arrow-left" for="perfil-3" aria-label="Ver perfil anterior">←</label>
+          <label class="arrow-btn arrow-right" for="perfil-2" aria-label="Ver próximo perfil">→</label>
+        </article>
 
-    <script src="js/script.js"></script>
+        <article class="trajectory-card profile-two" aria-label="Perfil 2">
+          <div class="trajectory-card-top"><span>BLACKWALL PROJEKT</span><span aria-hidden="true">◉</span></div>
+          <div class="trajectory-card-body">
+            <div class="trajectory-image image-placeholder"><span>02</span><small>FOTO A DEFINIR</small></div>
+            <div class="trajectory-info">
+              <span class="name-kicker">NAME //</span>
+              <h3>[NOME DA PESSOA]</h3>
+              <p class="relation">RELAÇÃO</p>
+              <p>Imagem e informações reservadas para a segunda pessoa da sua trajetória.</p>
+              <details class="person-details"><summary>Conheça mais <span aria-hidden="true">↗</span></summary><p>Conteúdo pendente das suas informações.</p></details>
+            </div>
+          </div>
+          <div class="trajectory-card-bottom">ARQUIVO PESSOAL // 02 <span aria-hidden="true">↥</span></div>
+          <label class="arrow-btn arrow-left" for="perfil-1" aria-label="Ver perfil anterior">←</label>
+          <label class="arrow-btn arrow-right" for="perfil-3" aria-label="Ver próximo perfil">→</label>
+        </article>
+
+        <article class="trajectory-card profile-three" aria-label="Perfil 3">
+          <div class="trajectory-card-top"><span>BLACKWALL PROJEKT</span><span aria-hidden="true">◉</span></div>
+          <div class="trajectory-card-body">
+            <div class="trajectory-image image-placeholder"><span>03</span><small>FOTO A DEFINIR</small></div>
+            <div class="trajectory-info">
+              <span class="name-kicker">NAME //</span>
+              <h3>[NOME DA PESSOA]</h3>
+              <p class="relation">RELAÇÃO</p>
+              <p>Imagem e informações reservadas para a terceira pessoa da sua trajetória.</p>
+              <details class="person-details"><summary>Conheça mais <span aria-hidden="true">↗</span></summary><p>Conteúdo pendente das suas informações.</p></details>
+            </div>
+          </div>
+          <div class="trajectory-card-bottom">ARQUIVO PESSOAL // 03 <span aria-hidden="true">↥</span></div>
+          <label class="arrow-btn arrow-left" for="perfil-2" aria-label="Ver perfil anterior">←</label>
+          <label class="arrow-btn arrow-right" for="perfil-1" aria-label="Ver próximo perfil">→</label>
+        </article>
+        <div class="carousel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
