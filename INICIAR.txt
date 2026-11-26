@@ -1,0 +1,11 @@
+BLACKWALL — EXECUÇÃO LOCAL (WINDOWS)
+
+1. Extraia o ZIP completamente. Abra a pasta projeto-individual-blackwall no VS Code.
+2. Para usar cadastro, login e resultados, inicie o MySQL e execute src/database/script-tabelas.sql no MySQL Workbench com um usuário administrador (somente na primeira configuração, em banco vazio).
+3. O servidor lê .env.dev. O banco configurado é blackwall_local, host 127.0.0.1, porta 3306. Se seu MySQL usa 3307, altere DB_PORT em .env.dev (e .env para manter ambos coerentes).
+4. No terminal, execute npm start. As dependências do arquivo original já estão incluídas. Se aparecer MODULE_NOT_FOUND, execute npm install e depois npm start.
+5. Abra http://127.0.0.1:3333/ no navegador. Mantenha o terminal aberto.
+
+Sem MySQL, as páginas informativas abrem normalmente, mas cadastro, login e gravação/consulta de partidas precisam do banco. Não use a senha de exemplo em produção.
+
+Correções: endereço de escuta IPv4 local, nome do banco coerente com o SQL, configuração local padrão e mensagens de erro. O SQL, as páginas, o estilo e as regras dos jogos foram mantidos.

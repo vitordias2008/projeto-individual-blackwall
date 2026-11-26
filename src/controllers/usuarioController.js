@@ -35,7 +35,7 @@ function erroBanco(erro) {
     console.log("MySQL:", erro.code, erro.message);
 
     if (erro.code == "ECONNREFUSED" || erro.code == "ETIMEDOUT") {
-        return "MySQL local desligado ou porta incorreta. Confira o servico MySQL e a porta 3306.";
+        return "MySQL local desligado ou porta incorreta. Confira o servico MySQL e a porta " + process.env.DB_PORT + ".";
     } else if (erro.code == "ER_ACCESS_DENIED_ERROR" || erro.code == "ER_DBACCESS_DENIED_ERROR") {
         return "Usuario ou senha do MySQL incorretos. Execute o script SQL atualizado.";
     } else if (erro.code == "ER_BAD_DB_ERROR" || erro.code == "ER_NO_SUCH_TABLE" || erro.code == "ER_BAD_FIELD_ERROR") {
