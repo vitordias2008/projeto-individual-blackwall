@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bruno Dias e a minha infância | BLACKWALL</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/conexao.css">
+  <link rel="stylesheet" href="css/bruno.css">
+</head>
+<body class="pagina socio-page">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav">
+    <a class="brand" href="index.html" aria-label="BLACKWALL — página inicial">BW_</a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#portais">Arquivos</a>
+      <a href="blackwall.html">Blackwall</a>
+      <a href="cyberpunk.html">Cyberpunk</a>
+      <a href="index.html#interativos">Interativos</a>
+      <a href="socio.html">Minha conexão</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+  <main id="conteudo" class="memorial">
+    <header class="abertura-bruno">
+      <button class="foto-memoria" onclick="abrirFoto(1)" aria-label="Ampliar foto 1 dos irmãos"><img src="assets/infancia/01.jpg" alt="Infância – foto 1"></button>
+      <div>
+        <a class="voltar" href="pessoas.html#bruno">← Quem esteve comigo</a>
+        <p class="etiqueta">BRUNO E VITOR DIAS</p>
+        <h1>Eu e meu<br>irmão.</h1>
+        <p>Se eu começasse minha história pelo primeiro dia na SPTech, ia faltar o começo. Muito antes de eu pensar em fazer um site, eu já gostava de tecnologia. E quando volto à época em que esse interesse apareceu, lembro do Bruno.</p>
+        <a class="chamada" href="#infancia">Ler nossa história ↓</a>
+      </div>
+    </header>
+    <section class="infancia" id="infancia">
+      <div class="infancia-texto"><h2>A curiosidade veio de casa.</h2><p>Quando eu era criança, tecnologia ainda não tinha nome de disciplina. Eu não pensava em como apresentaria um projeto, nem em qual curso faria. Era uma coisa de que eu gostava. O Bruno faz parte dessa primeira relação que eu tive com o assunto. Quando conto que escolhi ADS, é fácil pular direto pra faculdade. Pra mim, faz sentido começar por ele.</p></div>
+      <button class="foto-memoria" onclick="abrirFoto(2)" aria-label="Ampliar foto 2 dos irmãos"><img src="assets/infancia/02.jpg" alt="Infância – foto 2" loading="lazy"></button>
+    </section>
+    <section class="night-city"><div><h2>Depois, encontrei minhas próprias perguntas.</h2><p>Aos 15 ou 16 anos, conheci David e Lucy em <i>Edgerunners</i>. Depois veio <i>Cyberpunk 2077</i>. A tecnologia que me chamava atenção desde criança aparecia ali de outro jeito. Um implante podia dar liberdade a uma pessoa e, ao mesmo tempo, deixar a vida dela nas mãos de quem controlava aquele recurso. Foi uma das ideias que eu quis explorar no BLACKWALL.</p></div><button class="foto-memoria" onclick="abrirFoto(3)" aria-label="Ampliar foto 3 da infância"><img src="assets/infancia/03.jpg" alt="Infância – foto 3" loading="lazy"></button></section>
+    <section class="projeto"><button class="foto-memoria" onclick="abrirFoto(4)" aria-label="Ampliar foto 4 dos irmãos"><img src="assets/infancia/04.jpg" alt="Infância – foto 4" loading="lazy"></button><div><h2>O que isso tem a ver com o site?</h2><p>Hoje consigo pegar uma pergunta dessas e montar uma página pra outra pessoa explorar. Preciso escolher por onde a história começa, o que a imagem conta sozinha e o que merece uma explicação minha. É nesse processo que percebo o quanto aquele interesse cresceu. Começou em casa e hoje aparece no que eu escolho estudar e no que tenho vontade de criar.</p></div></section>
+    <section class="carta">
+      <div class="carta-coluna">
+        <article class="bilhete" aria-labelledby="titulo-carta">
+          <p class="destinatario">Pro meu irmão, Bruno Dias</p>
+          <h2 id="titulo-carta">Valeu, irmão.</h2>
+          <p>Bruno, olha a gente nessas fotos. Naquela época eu nem sabia o que era ADS. Hoje eu tô na faculdade, fiz meu próprio site e uma das partes que eu mais queria te mostrar é justamente essa aqui.</p>
+          <p>Quando me perguntam por que eu gosto de tecnologia, eu costumo falar dos jogos ou do que eu estudo. Mas, se eu volto lá pro começo, eu lembro de você. Acho que nunca te falei isso desse jeito.</p>
+          <p>Obrigado por fazer parte da minha vida desde o comecinho. Gosto de ter essas fotos nossas aqui. Gosto mais ainda de poder te mostrar o que eu fiz.</p>
+          <p class="assinatura"><span>Do teu irmão,</span>Vitor</p>
+        </article>
+        <a class="chamada" href="pessoas.html#bruno">Voltar ao álbum de pessoas →</a>
+      </div>
+      <button class="foto-memoria" onclick="abrirFoto(5)" aria-label="Ampliar foto 5 dos irmãos"><img src="assets/infancia/05.jpg" alt="Infância – foto 5" loading="lazy"></button>
+    </section>
+  </main>
+  <dialog id="ampliacao" aria-label="Foto ampliada">
+    <button type="button" onclick="fecharFoto()" aria-label="Fechar foto">Fechar ×</button>
+    <img id="foto_grande" alt="">
+    <div><button type="button" onclick="mudarFoto(-1)" aria-label="Foto anterior">←</button><span id="numero_foto" aria-live="polite"></span><button type="button" onclick="mudarFoto(1)" aria-label="Próxima foto">→</button></div>
+  </dialog>
+  <script src="js/bruno.js"></script>
+</body>
+</html>

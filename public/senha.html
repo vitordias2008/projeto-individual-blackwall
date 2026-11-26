@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#04131a"><title>Jogo da Senha | BLACKWALL</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/jogos.css"><link rel="stylesheet" href="css/jogos-suave.css"></head>
+<body class="game-body password-page"><header class="site-nav game-nav">
+      <a class="brand" href="index.html">BW_</a>
+      <nav aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="blackwall.html">Blackwall</a>
+        <a href="cyberpunk.html">Cyberpunk</a>
+        <a href="index.html#interativos">Interativos</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+<main id="conteudo"><div class="game-background password-bg"></div>
+<section class="game-screen password-screen">
+  <div class="password-layout">
+    <div class="password-panel">
+      <div class="password-header">
+        <div><p class="small-code">// JOGO DA SENHA</p><h1>Crie uma senha<span>_</span></h1></div>
+        <div class="password-stats"><div class="password-clock"><span>CRONÔMETRO</span><strong id="cronometro">00:00</strong></div><div class="password-number"><strong id="nivel_atual">01</strong><span id="total_cabecalho">/ 15</span></div></div>
+      </div>
+      <div class="progress-track"><div id="progresso" class="progress-fill"></div></div>
+      <div class="password-input"><input type="text" id="ipt_senha_ficticia" placeholder="Digite sua senha..." oninput="verificarRegras()" autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Senha fictícia de teste" aria-describedby="aviso_senha"><span>_</span></div>
+      <p class="small-note" id="aviso_senha">Use uma senha inventada, nunca sua senha real.</p>
+      <p id="mensagem" class="game-error" role="alert"></p>
+      <div id="resultado_senha" class="password-success" style="display:none" aria-live="polite"><h3>ACESSO CONCEDIDO</h3><p>Todas as regras foram cumpridas.</p><a class="action-btn action-outline" href="dashboard.html">VER RESULTADOS ↗</a></div>
+      <div class="password-actions"><button class="action-btn" id="btn_salvar" onclick="salvarSenha()">SALVAR ↗</button><button class="light-btn" onclick="reiniciarSenha()">Recomeçar</button></div>
+    </div>
+    <div class="rules-panel">
+      <div class="rules-heading"><span class="small-code">// REGRAS</span><span id="regras_total">01 / 15</span></div>
+      <div id="regras" class="rules-list" aria-live="polite"></div>
+    </div>
+  </div>
+</section></main>
+<footer class="game-footer"><span>BLACKWALL // ARQUIVOS DE NIGHT CITY</span><a href="index.html">VOLTAR AO INÍCIO ↗</a></footer>
+<script src="js/senha.js"></script></body></html>

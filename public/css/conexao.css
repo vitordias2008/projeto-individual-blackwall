@@ -1,0 +1,111 @@
+.socio-page {
+  --noite: #07171e;
+  --linha: #38535b;
+  --marfim: #dedfd2;
+  background: var(--noite);
+}
+.socio-page .lua {
+  min-height: 100svh;
+  background: linear-gradient(90deg,#041019d9,transparent 75%), url("../assets/fundo_minha_trajetoria.webp") center / cover no-repeat;
+}
+.socio-page .abertura-texto { max-width: 480px; }
+.capitulo {
+  padding: clamp(64px, 8vw, 116px) var(--espaco);
+  scroll-margin-top: 80px;
+}
+.memorias, .valores {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 7vw, 115px);
+}
+.memoria-capa img {
+  width: 100%;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  margin-top: 14px;
+}
+.linha { margin: 0; padding: 0; list-style: none; }
+.linha li {
+  position: relative;
+  border-left: 1px solid var(--linha);
+  padding: 0 0 28px 28px;
+}
+.linha li:last-child { padding-bottom: 0; }
+.linha li::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  left: -5px;
+  top: 5px;
+  background: var(--acento);
+  transform: rotate(45deg);
+}
+.linha span { font: 12px monospace; color: var(--acento); }
+.capitulo h3 { font-size: clamp(22px, 2vw, 31px); margin: 7px 0; }
+.capitulo p { margin: 8px 0 0; }
+.valores { background: var(--marfim); color: var(--noite); }
+.socio-page .valores p, .socio-page .valores summary::after { color: #27444b; }
+.socio-page .valores summary:hover { color: #245d68; }
+.lista-valores { border-top: 1px solid var(--linha); }
+.lista-valores details p { padding-bottom: 22px; }
+.desafio {
+  background: linear-gradient(0deg, var(--noite) 5%, #080f15cf 85%), url("../assets/faixa_cidade_vermelha.webp") center/cover;
+}
+.relatos { display: grid; grid-template-columns: 1fr 1fr; gap: 8%; margin-top: 40px; }
+.relatos article { border-top: 2px solid #be4756; padding-top: 14px; }
+.relatos article + article { border-color: var(--acento); }
+.lista-valores details p + p { padding-top: 0; }
+
+.socio-page footer { gap: 14px; flex-wrap: wrap; }
+@media (max-width: 760px) {
+  .socio-page .site-nav { position: sticky; padding: 12px 16px; gap: 14px; background: var(--noite); }
+  .socio-page .site-nav nav { display: flex; flex-wrap: wrap; gap: 6px 12px; }
+  .socio-page .site-nav nav a { font-size: 10px; }
+  .socio-page .lua { min-height: 100svh; padding-block: 100px; }
+  .socio-page:has(.lua) .site-nav { position: absolute; }
+  .socio-page .abertura-texto { max-width: 100%; }
+  .memorias, .valores, .relatos { grid-template-columns: 1fr; gap: 30px; }
+  .memoria-capa img { aspect-ratio: 16 / 9; }
+  }
+
+.convite {
+  background: linear-gradient(90deg,#05131bf2,#05131b9c),url("../assets/transicao-cidade.webp") center / cover no-repeat;
+}
+.convite { padding: clamp(60px,9vw,130px) var(--espaco); }
+.convite div { max-width: 600px; }
+.album {
+  min-height: 100svh; display: grid; align-content: center;
+  padding: 95px var(--espaco) 45px;
+  background: linear-gradient(110deg,#07171ef5,#123c44da), url("../assets/transicao-cidade.webp") center / cover;
+  --papel: #e6e5d7;
+  --tinta: #122e34;
+}
+.album-miolo { width: min(100%, 1120px); margin: auto; }
+.album .etiqueta { margin-bottom: 8px; }
+.album h1 { font-size: clamp(40px,5vw,72px); margin-bottom: 25px; }
+.ficha {
+  display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+  border: 1px solid #57868c; border-top: 3px solid #90d2d1;
+  background: #123139;
+}
+.moldura { margin: clamp(14px,2vw,24px); padding: 5px; border: 1px solid #70949a; align-self: center; }
+.moldura img { display: block; width: 100%; aspect-ratio: 1; object-fit: cover; }
+.ficha-texto { background: var(--papel); color: var(--tinta); padding: clamp(24px,3.2vw,52px); }
+.album .ficha-texto p { color: var(--tinta); font-size: 16px; line-height: 1.65; margin: 8px 0 0; }
+.album .ficha-texto .etiqueta { font: 12px monospace; color: #416166; margin: 0 0 12px; }
+.ficha-texto h3 { font-size: 17px; margin: 20px 0 0; border-top: 1px solid #a7b6ad; padding-top: 16px; }
+.ficha h2 { font-size: clamp(32px,4vw,58px); margin-bottom: 14px; }
+.album-base { display: flex; align-items: center; gap: 10px; padding-top: 14px; }
+.album-base a { margin-right: auto; }
+.album-base button {
+  width: 48px; height: 44px; border: 1px solid #67959c; background: #0b242c;
+  color: #c2edf2; cursor: pointer; font-size: 24px;
+}
+.album-base button:hover, .album-base button:focus-visible { background: #18414a; }
+@media(max-width: 650px) {
+  .album { padding: 28px 20px; min-height: 86svh; }
+  .ficha { grid-template-columns: 1fr; }
+  .moldura { width: min(72%,280px); margin: 16px auto 0; }
+  .ficha-texto { padding: 20px; }
+}

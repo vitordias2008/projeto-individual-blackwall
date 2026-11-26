@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dashboard | BLACKWALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dashboard-page">
+    <header class="site-nav">
+        <a class="brand" href="index.html">BW<span>_</span></a>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="blackwall.html">Blackwall</a>
+            <a href="cyberpunk.html">Cyberpunk</a>
+            <a href="index.html#interativos">Interativos</a>
+            <a class="nav-ativo" href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+    <main class="painel">
+        <header class="dash-capa">
+            <div>
+                <p class="legenda">BLACKWALL / DESEMPENHO PESSOAL</p>
+                <h1>Minha dashboard<em>_</em></h1>
+                <p id="perfil_usuario"></p>
+                <p id="resumo" role="status">Consultando resultados...</p>
+            </div>
+            <div class="dash-acoes">
+                <a id="entrar" class="dash-botao" href="login.html" hidden>Entrar</a>
+                <button id="recarregar" class="dash-botao" onclick="carregarDashboard()" hidden>Atualizar</button>
+                <button id="sair" class="dash-botao" onclick="sairConta()" hidden>Sair</button>
+            </div>
+        </header>
+        <p id="mensagem" role="status"></p>
+        <section class="dash-kpis" aria-label="Indicadores gerais">
+            <article><p>Taxa de acerto</p><strong id="taxa">—</strong><span id="amostra">Quiz</span></article>
+            <article><p>Partidas do quiz</p><strong id="partidas_quiz">—</strong><span id="quiz_completos">Histórico de respostas</span></article>
+            <article><p>Recorde da senha</p><strong id="recorde">—</strong><span>De 15 regras alcançadas</span></article>
+            <article><p>Desafios concluídos</p><strong id="vitorias">—</strong><span id="tempo">Melhor tempo: —</span></article>
+        </section>
+        <section class="dash-secao">
+            <div class="titulo"><div><p class="legenda">01 / QUIZ</p><h2>Realidade ou Cyberpunk?</h2></div><a href="login.html?destino=realidade.html">Jogar ↗</a></div>
+            <div class="dash-grade">
+                <article class="dash-card"><h3>Distribuição de respostas</h3><p>Acertos e erros de todas as partidas.</p><div class="grafico"><canvas id="grafico_acertos" aria-label="Acertos e erros" role="img"></canvas><div id="vazio_acertos" class="grafico-vazio">Nenhuma resposta registrada.</div></div></article>
+                <article class="dash-card"><h3>O que você reconhece melhor?</h3><p>Taxa de acerto por tipo de tecnologia.</p><div class="grafico"><canvas id="grafico_tipos" aria-label="Taxa de acerto em realidade e ficção" role="img"></canvas><div id="vazio_tipos" class="grafico-vazio">Nenhuma resposta registrada.</div></div><p id="leitura" class="dash-insight"></p></article>
+                <article class="dash-card dash-largo"><h3>Evolução no quiz</h3><p>Taxa de acerto nas últimas oito partidas registradas, inclusive incompletas.</p><div class="grafico grafico-linha"><canvas id="grafico_quiz" aria-label="Evolução da taxa de acerto por partida" role="img"></canvas><div id="vazio_quiz" class="grafico-vazio">Jogue para acompanhar sua evolução.</div></div><p id="historico_quiz" class="dash-insight"></p></article>
+            </div>
+        </section>
+        <section class="dash-secao">
+            <div class="titulo"><div><p class="legenda">02 / DESAFIO</p><h2>Jogo da Senha</h2></div><a href="login.html?destino=senha.html">Jogar ↗</a></div>
+            <div class="dash-grade senha-grade">
+                <article class="dash-card"><h3>Evolução no desafio</h3><p>Regra mais alta alcançada nas últimas oito partidas.</p><div class="grafico"><canvas id="grafico_senha" aria-label="Regras alcançadas por partida" role="img"></canvas><div id="vazio_senha" class="grafico-vazio">Nenhuma partida registrada.</div></div><p id="leitura_senha" class="dash-insight"></p></article>
+                <article class="dash-card"><h3>Histórico de partidas</h3><p>Resultados mais recentes do desafio.</p><div class="dash-tabela"><table><thead><tr><th>Partida</th><th>Regra</th><th>Tempo</th><th>Status</th></tr></thead><tbody id="ultimas"><tr><td colspan="4">Nenhuma partida registrada.</td></tr></tbody></table></div></article>
+            </div>
+        </section>
+        <footer class="dash-rodape">BW_ / Resultados individuais obtidos a partir das partidas salvas.</footer>
+    </main>
+    <script src="chartjs/chart.umd.js" onerror="this.onerror=null; this.src='https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.js'"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

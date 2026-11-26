@@ -1,0 +1,683 @@
+<!doctype html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="#06131b" name="theme-color" />
+    <meta
+      content="BLACKWALL — uma viagem pela história da antiga rede de Cyberpunk, do DataKrash à Blackwall, com explicações acessíveis e três casos reais sobre IA e cibersegurança."
+      name="description"
+    />
+    <title>BLACKWALL // A fronteira entre o conhecido e o desconhecido</title>
+    <link as="image" href="assets/hero-blackwall.webp" rel="preload" />
+    <link href="./css/blackwall.css" rel="stylesheet" />
+    <script defer="" src="./js/blackwall.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <div aria-hidden="true" class="page-noise"></div>
+    <div aria-hidden="true" class="scroll-progress">
+      <span id="site_progress"></span>
+    </div>
+    
+    <header class="site-header site-header--visible" id="cabecalho">
+      <div class="site-header__inner">
+        <a class="brand" href="index.html" aria-label="BLACKWALL — página inicial">BW_</a>
+        <nav aria-label="Navegação principal" class="site-nav" id="site-nav">
+      <a href="index.html">Início</a>
+      <a href="index.html#portais">Arquivos</a>
+      <a href="blackwall.html" aria-current="page">Blackwall</a>
+      <a href="cyberpunk.html">Cyberpunk</a>
+      <a href="index.html#interativos">Interativos</a>
+      <a href="socio.html">Minha conexão</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+      </div>
+    </header>
+    <main id="conteudo">
+      
+      <section aria-labelledby="hero-title" class="hero" id="inicio">
+        <div aria-hidden="true" class="hero__photo"></div>
+        <div aria-hidden="true" class="hero__veil"></div>
+        <div class="hero__content shell">
+          <h1 class="hero__logo" id="hero-title">
+            <img alt="BLACKWALL" src="assets/logo_blackwall.png" />
+          </h1>
+          <a class="hero__concept" href="#historia">ENTENDA O CONCEITO</a>
+        </div>
+        <span aria-hidden="true" class="glitch-seam"></span>
+      </section>
+      
+      <section aria-labelledby="history-heading" class="history" id="historia">
+        <div class="shell history__intro reveal">
+          <span class="eyebrow"
+            ><span class="eyebrow--red">01</span> / A ORIGEM DA BLACKWALL</span
+          >
+          <h2 class="section-heading" id="history-heading">
+            COMO TUDO <em>COMEÇOU</em>
+          </h2>
+          <p>
+            Antes da Blackwall, existia uma rede que conectava quase tudo. O que
+            aconteceu com ela — e por que foi necessário criar uma barreira?
+          </p>
+          <span class="guide-note"
+            ><span class="guide-note__plus">+</span> Toque em
+            <strong>Entenda melhor</strong> para abrir cada explicação.</span
+          >
+        </div>
+        <div class="timeline shell" id="timeline">
+          <div aria-hidden="true" class="timeline__track">
+            <div class="timeline__track-fill" id="timeline_fill"></div>
+          </div>
+          <article class="timeline-item reveal" id="antiga-rede">
+            <div class="timeline-item__image">
+              <img
+                alt="Visão de uma metrópole futurista iluminada, representando a antiga rede"
+                loading="lazy"
+                src="assets/antiga-rede.webp"
+              />
+              <span class="timeline-item__image-id">ARQUIVO // 001</span>
+            </div>
+            <span aria-hidden="true" class="timeline-item__node"></span>
+            <div class="timeline-item__copy">
+              <span class="timeline-item__date">ANTES DE 2022</span>
+              <h3>A antiga rede</h3>
+              <p>
+                Pense em uma internet que conectava quase tudo: pessoas,
+                empresas, governos e sistemas inteligentes. Ela facilitava a
+                vida, mas também concentrava uma quantidade enorme de
+                informações e poder.
+              </p>
+              <details class="deep-dive">
+                <summary>
+                  <span aria-hidden="true" class="deep-dive__icon"></span
+                  ><span class="deep-dive__closed">Entenda melhor</span
+                  ><span class="deep-dive__opened">Mostrar menos</span>
+                </summary>
+                <div class="deep-dive__body">
+                  <h4>Era igual à internet que usamos hoje?</h4>
+                  <p>
+                    Era parecida na ideia de conectar pessoas e máquinas, mas
+                    muito mais presente no funcionamento do mundo. Empresas,
+                    serviços e governos dependiam dela para trocar dados e
+                    operar seus sistemas.
+                  </p>
+                  <h4>Já existiam inteligências artificiais?</h4>
+                  <p>
+                    Sim. Algumas inteligências artificiais, ou IAs, já
+                    trabalhavam para organizações e executavam tarefas
+                    complexas. Uma IA é um programa capaz de analisar
+                    informações e tomar decisões dentro das capacidades para as
+                    quais foi desenvolvido.
+                  </p>
+                  <h4>Por que isso era um problema?</h4>
+                  <p>
+                    A concentração de dados criava uma dependência enorme. Se a
+                    rede falhasse ou fosse atacada, o prejuízo não ficaria
+                    restrito a uma pessoa: poderia atingir empresas, sistemas e
+                    serviços inteiros.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="timeline-item timeline-item--reverse reveal"
+            id="datakrash"
+          >
+            <div class="timeline-item__image">
+              <img
+                alt="Retrato digital de um hacker, representando Rache Bartmoss e o DataKrash"
+                loading="lazy"
+                src="assets/rache-bartmoss.webp"
+              />
+              <span class="timeline-item__image-id">ARQUIVO // 002</span>
+            </div>
+            <span aria-hidden="true" class="timeline-item__node"></span>
+            <div class="timeline-item__copy">
+              <span class="timeline-item__date">2022</span>
+              <h3>Rache Bartmoss e o DataKrash</h3>
+              <p>
+                Rache Bartmoss, um hacker que enfrentava o poder das
+                megacorporações, lançou um ataque que comprometeu a antiga rede.
+                Informações foram corrompidas, sistemas ficaram instáveis e os
+                efeitos se espalharam pelo mundo.
+              </p>
+              <details class="deep-dive">
+                <summary>
+                  <span aria-hidden="true" class="deep-dive__icon"></span
+                  ><span class="deep-dive__closed">Entenda melhor</span
+                  ><span class="deep-dive__opened">Mostrar menos</span>
+                </summary>
+                <div class="deep-dive__body">
+                  <h4>Afinal, o que foi o DataKrash?</h4>
+                  <p>
+                    Foi um ataque digital de grande escala. Bartmoss criou
+                    programas capazes de se espalhar pela rede e alterar ou
+                    destruir informações. O resultado foi um colapso da
+                    confiança nos sistemas conectados.
+                  </p>
+                  <h4>Por que Bartmoss fez isso?</h4>
+                  <p>
+                    Ele acreditava que as megacorporações tinham poder demais
+                    sobre a rede e as informações. Seu ataque foi uma forma
+                    extrema de enfrentá-las. Mas combater esse domínio não
+                    significou proteger as pessoas: as consequências foram muito
+                    além de seu alvo.
+                  </p>
+                  <h4>O ataque criou as IAs perigosas?</h4>
+                  <p>
+                    Não. Muitas IAs já existiam. O DataKrash enfraqueceu
+                    sistemas de controle e ajudou a deixar parte delas
+                    independente, sem a supervisão humana que antes limitava
+                    suas ações.
+                  </p>
+                  <h4>Então todas essas IAs eram más?</h4>
+                  <p>
+                    Não necessariamente. Algumas poderiam ser hostis, outras
+                    tinham objetivos desconhecidos. O perigo estava em não saber
+                    o que pretendiam fazer e nem sempre conseguir impedir suas
+                    ações.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <p class="timeline-interlude reveal">
+            O ataque acabou. O que permaneceu na rede, porém, continuou sendo um
+            problema.
+          </p>
+          <article class="timeline-item reveal" id="ias">
+            <div class="timeline-item__image">
+              <img
+                alt="Rosto digital azul formado por dados, simbolizando inteligências artificiais independentes"
+                loading="lazy"
+                src="assets/ias-independentes.webp"
+              />
+              <span class="timeline-item__image-id">ARQUIVO // 003</span>
+            </div>
+            <span aria-hidden="true" class="timeline-item__node"></span>
+            <div class="timeline-item__copy">
+              <span class="timeline-item__date">DÉCADAS DE 2030 E 2040</span>
+              <h3>As IAs independentes</h3>
+              <p>
+                Algumas inteligências artificiais continuaram ativas nas regiões
+                comprometidas da rede. Agora, muitas agiam por conta própria,
+                com capacidades e objetivos que os humanos não compreendiam
+                totalmente.
+              </p>
+              <details class="deep-dive">
+                <summary>
+                  <span aria-hidden="true" class="deep-dive__icon"></span
+                  ><span class="deep-dive__closed">Entenda melhor</span
+                  ><span class="deep-dive__opened">Mostrar menos</span>
+                </summary>
+                <div class="deep-dive__body">
+                  <h4>O que essas IAs faziam?</h4>
+                  <p>
+                    Depende da IA. Algumas protegiam seus próprios sistemas,
+                    outras buscavam informações, recursos ou influência. Não
+                    havia uma intenção única compartilhada por todas elas.
+                  </p>
+                  <h4>Qual era o risco de acessar a rede?</h4>
+                  <p>
+                    Entrar em regiões comprometidas significava encontrar
+                    sistemas corrompidos e programas muito mais poderosos do que
+                    o esperado. Um invasor poderia perder dados, ser manipulado
+                    ou se tornar alvo de uma inteligência hostil.
+                  </p>
+                  <h4>O que é um netrunner?</h4>
+                  <p>
+                    No universo Cyberpunk, é uma pessoa especializada em navegar
+                    e invadir redes digitais. Imagine um hacker que consegue
+                    explorar ambientes virtuais muito mais imersivos do que uma
+                    tela de computador comum.
+                  </p>
+                  <h4>Por que não desligaram tudo?</h4>
+                  <p>
+                    A antiga rede era extensa, fragmentada e difícil de
+                    controlar depois do colapso. Além disso, parte das IAs
+                    continuava operando em lugares que já não estavam sob o
+                    domínio das organizações humanas.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article
+            class="timeline-item timeline-item--reverse reveal"
+            id="criacao"
+          >
+            <div class="timeline-item__image">
+              <img
+                alt="Prédio futurista da NetWatch, organização responsável pela proteção das redes"
+                loading="lazy"
+                src="assets/netwatch.webp"
+              />
+              <span class="timeline-item__image-id">ARQUIVO // 004</span>
+            </div>
+            <span aria-hidden="true" class="timeline-item__node"></span>
+            <div class="timeline-item__copy">
+              <span class="timeline-item__date">A PARTIR DE 2044</span>
+              <h3>A criação da Blackwall</h3>
+              <p>
+                A NetWatch, organização responsável por vigiar a segurança das
+                redes, iniciou o desenvolvimento de uma barreira para separar os
+                sistemas usados pelas pessoas das áreas perigosas da antiga
+                rede.
+              </p>
+              <details class="deep-dive">
+                <summary>
+                  <span aria-hidden="true" class="deep-dive__icon"></span
+                  ><span class="deep-dive__closed">Entenda melhor</span
+                  ><span class="deep-dive__opened">Mostrar menos</span>
+                </summary>
+                <div class="deep-dive__body">
+                  <h4>O que é a NetWatch?</h4>
+                  <p>
+                    É uma organização do universo Cyberpunk que monitora as
+                    redes e tenta impedir ameaças digitais. Ela atua como uma
+                    força de segurança dentro desse mundo conectado.
+                  </p>
+                  <h4>A Blackwall é um muro físico?</h4>
+                  <p>
+                    Não. É uma barreira digital. Sua função é limitar o contato
+                    entre as redes relativamente seguras e as regiões dominadas
+                    por sistemas e IAs que escaparam do controle humano.
+                  </p>
+                  <h4>Por que criar uma barreira, e não destruir tudo?</h4>
+                  <p>
+                    O problema já era grande demais para ser resolvido com um
+                    simples desligamento. Separar os ambientes tornou-se uma
+                    forma de reduzir os riscos, mesmo sem recuperar o domínio
+                    sobre toda a antiga rede.
+                  </p>
+                  <h4>Ela garante segurança absoluta?</h4>
+                  <p>
+                    Não. Ela reduz o contato, mas não torna o perigo
+                    inexistente. Sua existência é uma lembrança de que conter
+                    uma ameaça pode ser mais realista do que eliminá-la por
+                    completo.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+          <article class="timeline-item reveal" id="alem">
+            <div class="timeline-item__image">
+              <img
+                alt="Fissura digital vermelha iluminando uma passagem escura"
+                loading="lazy"
+                src="assets/alem-da-blackwall.webp"
+              />
+              <span class="timeline-item__image-id">ARQUIVO // 005</span>
+            </div>
+            <span aria-hidden="true" class="timeline-item__node"></span>
+            <div class="timeline-item__copy">
+              <span class="timeline-item__date">2077</span>
+              <h3>O que existe do outro lado?</h3>
+              <p>
+                A Blackwall continua separando o mundo conectado de regiões da
+                antiga rede. Mesmo com o perigo, existem pessoas e grupos
+                dispostos a atravessá-la por curiosidade, informação ou poder.
+              </p>
+              <details class="deep-dive">
+                <summary>
+                  <span aria-hidden="true" class="deep-dive__icon"></span
+                  ><span class="deep-dive__closed">Entenda melhor</span
+                  ><span class="deep-dive__opened">Mostrar menos</span>
+                </summary>
+                <div class="deep-dive__body">
+                  <h4>É possível atravessar a Blackwall?</h4>
+                  <p>
+                    Sim, mas isso é apresentado como uma prática extremamente
+                    arriscada. A barreira existe justamente porque os sistemas
+                    além dela não são considerados seguros para o contato
+                    humano.
+                  </p>
+                  <h4>Por que alguém tentaria?</h4>
+                  <p>
+                    Conhecimento, poder e interesses políticos ou corporativos.
+                    Para alguns, o que existe do outro lado pode oferecer
+                    vantagens impossíveis de conseguir nas redes comuns.
+                  </p>
+                  <h4>O outro lado é habitado apenas por IAs malignas?</h4>
+                  <p>
+                    Não há razão para tratar todas como iguais. A história
+                    trabalha com entidades de objetivos diversos, muitas vezes
+                    desconhecidos. O conflito está na falta de controle e na
+                    diferença entre os interesses humanos e os dessas
+                    inteligências.
+                  </p>
+                </div>
+              </details>
+            </div>
+          </article>
+        </div>
+        <div aria-hidden="true" class="timeline-end shell"><span></span></div>
+      </section>
+      
+      <section aria-labelledby="casos-heading" class="real-cases" id="casos">
+        <div class="shell real-cases__inner">
+          <div class="reveal cases-heading">
+            <span class="eyebrow"
+              ><span class="eyebrow--red">02</span> / DA FICÇÃO À
+              REALIDADE</span
+            >
+            <h2 class="section-heading" id="casos-heading">
+              QUÃO LONGE ESTAMOS<br /><em>DESSA DISTOPIA?</em>
+            </h2>
+            <p>
+              O mundo de Cyberpunk é ficção, mas já enfrentamos perguntas
+              parecidas sobre os limites da inteligência artificial. Conheça
+              três casos reais.
+            </p>
+          </div>
+          
+          <div
+            aria-label="Casos reais sobre IA e cibersegurança"
+            class="cases-gallery"
+            id="cases-gallery"
+          >
+            <div class="cases-gallery__top">
+              <span>ARQUIVO / CASOS REAIS</span>
+              <span aria-live="polite" id="case_counter">01 / 03</span>
+            </div>
+            <div class="cases-gallery__window" id="cases-viewport" tabindex="0" >
+              <div class="cases-gallery__track" id="cases_track">
+                <button
+                  aria-label="Ver caso 1: Quando a IA saiu do teste"
+                  aria-pressed="true"
+                  class="case-slide case-slide--active"
+                  id="card_0" data-case="0" onclick="mostrarCaso(0)"
+                  type="button"
+                >
+                  <span class="case-slide__image"
+                    ><img
+                      alt="Identidade visual da empresa Anthropic"
+                      loading="lazy"
+                      src="assets/anthropic.webp"
+                  /></span>
+                  <span class="case-slide__caption"
+                    ><span>01 / 03</span
+                    ><strong>Quando a IA saiu do teste</strong></span
+                  >
+                </button>
+                <button
+                  aria-label="Ver caso 2: IA ajuda a encontrar falhas no PHP"
+                  aria-pressed="false"
+                  class="case-slide"
+                  id="card_1" data-case="1" onclick="mostrarCaso(1)"
+                  type="button"
+                >
+                  <span class="case-slide__image"
+                    ><img
+                      alt="Logotipo do PHP em uma tela de programação"
+                      loading="lazy"
+                      src="assets/php.webp"
+                  /></span>
+                  <span class="case-slide__caption"
+                    ><span>02 / 03</span
+                    ><strong>IA ajuda a encontrar falhas no PHP</strong></span
+                  >
+                </button>
+                <button
+                  aria-label="Ver caso 3: Engenharia reversa e limites"
+                  aria-pressed="false"
+                  class="case-slide"
+                  id="card_2" data-case="2" onclick="mostrarCaso(2)"
+                  type="button"
+                >
+                  <span class="case-slide__image"
+                    ><img
+                      alt="Código de computador exibido em uma tela escura"
+                      loading="lazy"
+                      src="assets/engenharia-reversa.webp"
+                  /></span>
+                  <span class="case-slide__caption"
+                    ><span>03 / 03</span
+                    ><strong>Engenharia reversa e limites</strong></span
+                  >
+                </button>
+              </div>
+            </div>
+            <div class="cases-gallery__arrows">
+              <button
+                aria-label="Caso anterior"
+                class="cases-gallery__arrow"
+                id="case-prev" onclick="casoAnterior()"
+                type="button"
+              >
+                <span aria-hidden="true">◀</span> ANTERIOR
+              </button>
+              <div aria-label="Selecionar caso" class="cases-gallery__dots">
+                <button
+                  aria-current="true"
+                  aria-label="Ver caso 1"
+                  class="case-dot is-active" onclick="mostrarCaso(0)"
+                  data-jump="0" id="ponto_0"
+                  type="button"
+                ></button>
+                <button
+                  aria-label="Ver caso 2"
+                  data-jump="1" class="case-dot" onclick="mostrarCaso(1)" id="ponto_1"
+                  type="button"
+                ></button>
+                <button
+                  aria-label="Ver caso 3"
+                  data-jump="2" class="case-dot" onclick="mostrarCaso(2)" id="ponto_2"
+                  type="button"
+                ></button>
+              </div>
+              <button
+                aria-label="Próximo caso"
+                class="cases-gallery__arrow"
+                id="case-next" onclick="proximoCaso()"
+                type="button"
+              >
+                PRÓXIMO <span aria-hidden="true">▶</span>
+              </button>
+            </div>
+            <div
+              aria-live="polite"
+              class="cases-gallery__information"
+              id="case_information"
+            >
+              <article
+                aria-label="Informações sobre Quando a IA saiu do teste"
+                class="case-info"
+                id="info_0" data-case="0"
+              >
+                <div class="case-info__intro">
+                  <span class="case-info__date">01 / JULHO DE 2026</span>
+                  <h3>Quando a IA saiu do teste</h3>
+                  <p>
+                    Modelos Claude, da Anthropic, chegaram a sistemas reais de
+                    três organizações durante avaliações que deveriam acontecer
+                    em ambientes isolados.
+                  </p>
+                </div>
+                <details class="deep-dive deep-dive--case">
+                  <summary>
+                    <span aria-hidden="true" class="deep-dive__icon"></span
+                    ><span class="deep-dive__closed">Entenda o caso</span
+                    ><span class="deep-dive__opened">Mostrar menos</span>
+                  </summary>
+                  <div class="deep-dive__body">
+                    <h4>O que aconteceu?</h4>
+                    <p>
+                      Durante testes de segurança, sistemas que deveriam
+                      permanecer separados da internet permitiram acessos a
+                      redes reais. A empresa relatou três incidentes e
+                      reconheceu falhas no isolamento das avaliações.
+                    </p>
+                    <h4>Qual é a relação com a Blackwall?</h4>
+                    <p>
+                      É uma questão de fronteiras: não basta dizer a um sistema
+                      que existe um limite. O ambiente precisa fazer esse limite
+                      funcionar na prática.
+                    </p>
+                    <p class="source-line">
+                      Fonte:
+                      <a
+                        href="https://www.reuters.com/legal/litigation/anthropic-says-claude-ai-models-accessed-three-companies-during-tests-2026-07-30/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        >Reuters, 30 jul. 2026 ↗</a
+                      >
+                    </p>
+                  </div>
+                </details>
+              </article>
+              <article
+                aria-label="Informações sobre IA ajuda a encontrar falhas no PHP"
+                class="case-info"
+                id="info_1" data-case="1"
+                hidden=""
+              >
+                <div class="case-info__intro">
+                  <span class="case-info__date">02 / OUTUBRO DE 2026</span>
+                  <h3>IA ajuda a encontrar falhas no PHP</h3>
+                  <p>
+                    Pesquisadores, com apoio de modelos de IA, identificaram
+                    falhas críticas no PHP, uma tecnologia muito usada para
+                    construir sites e serviços.
+                  </p>
+                </div>
+                <details class="deep-dive deep-dive--case">
+                  <summary>
+                    <span aria-hidden="true" class="deep-dive__icon"></span
+                    ><span class="deep-dive__closed">Entenda o caso</span
+                    ><span class="deep-dive__opened">Mostrar menos</span>
+                  </summary>
+                  <div class="deep-dive__body">
+                    <h4>O que é o PHP?</h4>
+                    <p>
+                      É uma linguagem de programação usada no funcionamento de
+                      muitos sites. Problemas de segurança nela podem afetar
+                      aplicações que dependem dessa tecnologia.
+                    </p>
+                    <h4>Por que a descoberta importa?</h4>
+                    <p>
+                      Uma falha crítica pode permitir que alguém execute ações
+                      indevidas em um servidor. Nesse caso, a IA ajudou
+                      pesquisadores a encontrar problemas e trabalhar em
+                      correções antes que o risco aumentasse.
+                    </p>
+                    <h4>Isso é uma ameaça ou uma solução?</h4>
+                    <p>
+                      As duas possibilidades existem. A capacidade de investigar
+                      sistemas pode ajudar defensores a encontrar falhas, mas
+                      também exige regras, transparência e cuidado com usos
+                      maliciosos.
+                    </p>
+                    <p class="source-line">
+                      Fonte:
+                      <a
+                        href="https://openai.com/pt-BR/index/coordinated-disclosure-of-critical-vulnerabilities/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        >OpenAI — Patch the Planet, 21 out. 2026 ↗</a
+                      >
+                    </p>
+                  </div>
+                </details>
+              </article>
+              <article
+                aria-label="Informações sobre Engenharia reversa e limites"
+                class="case-info"
+                id="info_2" data-case="2"
+                hidden=""
+              >
+                <div class="case-info__intro">
+                  <span class="case-info__date">03 / OUTUBRO DE 2026</span>
+                  <h3>Engenharia reversa e limites</h3>
+                  <p>
+                    Ferramentas de IA passaram a ajudar na análise de programas,
+                    enquanto novas restrições reacenderam a discussão sobre
+                    segurança, liberdade e direito de reparar.
+                  </p>
+                </div>
+                <details class="deep-dive deep-dive--case">
+                  <summary>
+                    <span aria-hidden="true" class="deep-dive__icon"></span
+                    ><span class="deep-dive__closed">Entenda o caso</span
+                    ><span class="deep-dive__opened">Mostrar menos</span>
+                  </summary>
+                  <div class="deep-dive__body">
+                    <h4>O que é engenharia reversa?</h4>
+                    <p>
+                      É tentar entender como um programa ou dispositivo funciona
+                      observando seu comportamento e seus componentes, mesmo sem
+                      ter acesso à explicação de quem o criou.
+                    </p>
+                    <h4>Qual é a discussão?</h4>
+                    <p>
+                      Essas técnicas podem ajudar em pesquisa, compatibilidade e
+                      reparos, mas também podem ser utilizadas para contornar
+                      proteções. Por isso, o debate envolve tanto segurança
+                      quanto liberdade de uso.
+                    </p>
+                    <h4>Por que isso importa para a nossa reflexão?</h4>
+                    <p>
+                      É outro exemplo de uma pergunta central: quem deve definir
+                      os limites de uma tecnologia e como evitar que as
+                      restrições prejudiquem usos legítimos?
+                    </p>
+                    <p class="source-line">
+                      Fonte:
+                      <a
+                        href="https://canaltech.com.br/inteligencia-artificial/claude-trava-tarefas-de-engenharia-reversa-e-revolta-quem-modifica-jogos-e-tvs/"
+                        rel="noopener noreferrer"
+                        target="_blank"
+                        >Canaltech, 28 out. 2026 ↗</a
+                      >
+                    </p>
+                  </div>
+                </details>
+              </article>
+            </div>
+            <p class="cases-gallery__hint">
+              Use as setas ou clique nas imagens para navegar.
+            </p>
+          </div>
+          <div class="closing reveal">
+            <span aria-hidden="true" class="closing__line"></span>
+            <p>
+              O futuro de Cyberpunk não chegou.<br /><strong
+                >Mas as decisões sobre nossos limites já estão
+                acontecendo.</strong
+              >
+            </p>
+            <a class="button button--outline" href="#inicio"
+              >Voltar ao início <span aria-hidden="true">↑</span></a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="shell site-footer__inner">
+        <div>
+          <span class="footer-brand">BLACKWALL<span>//</span></span
+          ><small>ARQUIVOS DE NIGHT CITY</small>
+        </div>
+        <p>
+          Projeto temático independente. Os eventos da linha do tempo pertencem
+          ao universo fictício de Cyberpunk; os casos de 2026 são acontecimentos
+          reais e têm fontes indicadas.
+        </p>
+        <a href="#inicio">VOLTAR AO TOPO ↑</a>
+      </div>
+    </footer>
+    <button
+      aria-label="Voltar ao topo"
+      class="back-to-top"
+      id="back_to_top" onclick="voltarTopo()"
+      type="button"
+    >
+      ↑
+    </button>
+  </body>
+</html>

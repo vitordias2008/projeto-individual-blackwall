@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Quem esteve comigo | BLACKWALL</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/paginas.css">
+  <link rel="stylesheet" href="css/conexao.css">
+</head>
+<body class="pagina socio-page">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <header class="site-nav">
+    <a class="brand" href="index.html" aria-label="BLACKWALL — página inicial">BW_</a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html">Início</a>
+      <a href="index.html#portais">Arquivos</a>
+      <a href="blackwall.html">Blackwall</a>
+      <a href="cyberpunk.html">Cyberpunk</a>
+      <a href="index.html#interativos">Interativos</a>
+      <a href="socio.html">Minha conexão</a>
+      <a href="dashboard.html">Dashboard</a>
+    </nav>
+  </header>
+  <main id="conteudo">
+    <section class="album" aria-labelledby="titulo-album">
+      <div class="album-miolo">
+        <p class="etiqueta">MINHA TRAJETÓRIA</p>
+        <h1 id="titulo-album">Quem esteve comigo.</h1>
+        <article class="ficha" aria-live="polite" aria-atomic="true">
+          <figure class="moldura"><img id="foto" alt="Moldura de Bruno Dias"></figure>
+          <div class="ficha-texto">
+            <p class="etiqueta" id="posicao">01 / 06</p>
+            <h2 id="nome">Bruno Dias</h2>
+            <div id="bloco_fase">
+              <h3>Quando entrou na minha vida</h3>
+              <p id="fase"></p>
+            </div>
+            <div id="bloco_contribuicao">
+              <h3>O que trouxe pra minha trajetória</h3>
+              <p id="contribuicao"></p>
+              <a id="abrir_bruno" href="bruno.html" style="color: inherit; text-decoration: underline">Ler nossa história ↗</a>
+            </div>
+          </div>
+        </article>
+        <div class="album-base">
+          <a class="chamada" href="socio.html#gratidao">← Minha conexão</a>
+          <button type="button" onclick="trocarPessoa(-1)" aria-label="Pessoa anterior">←</button>
+          <button type="button" onclick="trocarPessoa(1)" aria-label="Próxima pessoa">→</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/pessoas.js"></script>
+</body>
+</html>

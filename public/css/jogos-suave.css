@@ -1,0 +1,227 @@
+/* Aparência escura dos dois minigames — HTML e JavaScript preservados */
+:root {
+  --jogo-fundo: #06131a;
+  --jogo-texto: #f0f4f5;
+  --jogo-suave: #aabdc4;
+  --jogo-ciano: #61d9d5;
+  --jogo-rosa: #f07d9b;
+  --jogo-verde: #82dbab;
+  --jogo-vermelho: #ff8093;
+}
+
+.game-body.password-page,
+.game-body.reality-page {
+  background: var(--jogo-fundo);
+  color: var(--jogo-texto);
+}
+
+/* A imagem continua presente, mas não compete com o texto. */
+.game-body .game-background {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  background-size: cover;
+  background-position: center;
+  pointer-events: none;
+  z-index: 0;
+}
+.game-body .reality-bg {
+  background-image:
+    linear-gradient(90deg, rgba(2,12,20,.88), rgba(2,12,20,.79)),
+    url('../assets/fundo-cyberpunk.jpeg');
+}
+.game-body .password-bg {
+  background-image:
+    linear-gradient(90deg, rgba(2,12,20,.85), rgba(2,12,20,.78)),
+    url('../assets/ruas.jpg');
+}
+.game-body .game-screen { position: relative; z-index: 1; }
+.game-body .game-nav {
+  background: linear-gradient(180deg, rgba(3,14,22,.92), rgba(3,14,22,.1));
+  border-bottom: 1px solid rgba(136,197,209,.1);
+}
+.game-body .game-nav a,
+.game-body .game-nav .brand { color: var(--jogo-texto); }
+.game-body .game-nav a:hover,
+.game-body .small-code { color: var(--jogo-ciano); }
+.game-body .game-footer {
+  position: relative;
+  z-index: 1;
+  background: rgba(3,14,22,.8);
+  border-top: 1px solid rgba(110,175,189,.15);
+  color: #8097a2;
+}
+.game-body .game-footer a { color: var(--jogo-ciano); }
+.game-body .game-error { color: var(--jogo-vermelho); }
+.game-body .progress-track { background: rgba(134,176,184,.2); border-radius: 50px; }
+.game-body .progress-fill { background: var(--jogo-ciano); border-radius: 50px; }
+.game-body .action-btn {
+  background: #be405d;
+  border: 1px solid #be405d;
+  color: #fff;
+  border-radius: 5px;
+}
+.game-body .action-btn:hover { background: #d64c6c; border-color: #d64c6c; }
+.game-body .action-btn.action-outline {
+  background: transparent;
+  border-color: #438d90;
+  color: var(--jogo-ciano);
+}
+.game-body .action-btn.action-outline:hover { background: rgba(50,157,164,.13); }
+.game-body .light-btn { color: var(--jogo-suave); }
+
+/* Jogo da senha: título e entrada centralizados, regras sem cartões pesados. */
+.game-body .password-screen { max-width: 800px; }
+.game-body .password-header h1,
+.game-body .password-number strong { color: var(--jogo-texto); }
+.game-body .password-header h1 span { color: var(--jogo-rosa); }
+.game-body .password-number span,
+.game-body .password-clock span { color: #91abb4; }
+.game-body .password-clock strong { color: var(--jogo-texto); }
+.game-body .password-layout .password-input input {
+  background: rgba(5,24,33,.78);
+  border: 1px solid rgba(105,189,197,.42);
+  border-radius: 7px;
+  color: var(--jogo-texto);
+  font-size: clamp(18px, 2.3vw, 25px);
+  box-shadow: none;
+}
+.game-body .password-layout .password-input input::placeholder { color: #8197a0; }
+.game-body .password-layout .password-input input:focus {
+  border-color: var(--jogo-ciano);
+  box-shadow: 0 0 0 2px rgba(75,209,206,.09);
+}
+.game-body .password-input span { color: var(--jogo-rosa); }
+.game-body .small-note { color: #819ca5; }
+.game-body .password-layout .rules-heading { border-bottom-color: rgba(136,190,201,.2); }
+.game-body .password-layout .rules-heading span:last-child { color: #a7bac2; }
+.game-body .password-layout .rules-list { gap: 0; margin-top: 10px; }
+.game-body .password-layout .rule {
+  background: transparent;
+  color: var(--jogo-texto);
+  border: 0;
+  border-bottom: 1px solid rgba(115,169,182,.16);
+  border-radius: 0;
+  padding: 14px 3px;
+  box-shadow: none;
+  min-height: 58px;
+  font-size: 15px;
+}
+.game-body .password-layout .rule i {
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  width: 28px;
+  height: 28px;
+  font-size: 13px;
+}
+.game-body .password-layout .rule.fail,
+.game-body .password-layout .rule.fail i { color: var(--jogo-vermelho); }
+.game-body .password-layout .rule.ok,
+.game-body .password-layout .rule.ok i { color: var(--jogo-verde); }
+.game-body .password-layout .rule.fail i,
+.game-body .password-layout .rule.ok i { background: transparent; border: 0; }
+.game-body .password-success { border-left-color: var(--jogo-verde); }
+.game-body .password-success h3 { color: var(--jogo-verde); }
+.game-body .password-success p { color: var(--jogo-suave); }
+
+/* Quiz: pergunta e respostas no centro; opções como textos clicáveis. */
+.game-body .reality-screen { max-width: 1100px; }
+.game-body .reality-screen .question-shell {
+  max-width: 960px;
+  margin: 0 auto;
+  text-align: center;
+}
+.game-body .reality-screen .question-head span { color: var(--jogo-ciano); }
+.game-body .reality-screen .question-shell h2 {
+  color: var(--jogo-texto);
+  font: 400 clamp(32px, 4.6vw, 56px)/1.25 Georgia, 'Times New Roman', serif;
+  letter-spacing: -.025em;
+  max-width: 940px;
+  margin: clamp(44px, 6vw, 76px) auto 54px;
+  text-align: center;
+  text-wrap: balance;
+}
+.game-body .reality-screen .choice-grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: clamp(30px, 7vw, 100px);
+  margin: 0 auto 35px;
+  width: 100%;
+}
+.game-body .reality-screen .choice-grid button,
+.game-body .reality-screen .choice-grid button:nth-child(2) {
+  min-height: 85px;
+  width: auto;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 13px 8px;
+  box-shadow: none;
+  text-align: center;
+  font-size: clamp(19px, 2.3vw, 28px);
+  font-weight: 600;
+  letter-spacing: .1em;
+  transition: color .15s, border-color .15s;
+}
+.game-body .reality-screen .choice-grid button { color: var(--jogo-ciano); }
+.game-body .reality-screen .choice-grid button:nth-child(2) { color: var(--jogo-rosa); }
+.game-body .reality-screen .choice-grid button:not(:disabled):hover,
+.game-body .reality-screen .choice-grid button:nth-child(2):not(:disabled):hover {
+  background: transparent;
+  transform: none;
+  border-bottom-color: currentColor;
+}
+.game-body .reality-screen .choice-grid button:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 7px;
+}
+.game-body .reality-screen .choice-grid button:disabled { opacity: .62; }
+.game-body .reality-screen .feedback-box,
+.game-body .reality-screen .feedback-box.errou {
+  background: transparent;
+  border: 0;
+  border-top: 1px solid rgba(129,177,185,.22);
+  border-radius: 0;
+  color: #c2d3d8;
+  padding: 27px 8px 10px;
+  max-width: 750px;
+  margin: 4px auto 22px;
+  text-align: center;
+  line-height: 1.65;
+}
+.game-body .reality-screen .feedback-box strong { color: var(--jogo-verde); }
+.game-body .reality-screen .feedback-box.errou strong { color: var(--jogo-vermelho); }
+.game-body .reality-screen .feedback-source { color: var(--jogo-ciano); }
+.game-body .reality-screen #proxima { margin: 0 auto; display: block; }
+.game-body .reality-screen .play-copy h1,
+.game-body .reality-screen .result-shell h2 { color: var(--jogo-texto); }
+.game-body .reality-screen .play-copy > p:not(.small-code),
+.game-body .reality-screen .result-shell p:not(.small-code) { color: var(--jogo-suave); }
+.game-body .reality-screen .play-visual img { border-radius: 4px; }
+.game-body .reality-screen .result-number { color: var(--jogo-ciano); }
+
+@media (max-width: 700px) {
+  .game-body .game-screen { padding-top: 112px; }
+  .game-body .password-layout .rule { font-size: 13px; }
+  .game-body .password-layout .password-input input { height: 65px; }
+  .game-body .reality-screen .question-shell h2 { font-size: clamp(29px, 7vw, 39px); margin: 38px auto 40px; }
+  .game-body .reality-screen .choice-grid { gap: 18px; flex-wrap: wrap; }
+  .game-body .reality-screen .choice-grid button,
+  .game-body .reality-screen .choice-grid button:nth-child(2) {
+    font-size: clamp(16px, 4.5vw, 20px);
+    min-height: 62px;
+    letter-spacing: .045em;
+  }
+}
+@media (max-width: 390px) {
+  .game-body .reality-screen .choice-grid { flex-direction: column; gap: 4px; }
+}

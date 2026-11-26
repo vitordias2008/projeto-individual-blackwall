@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#04131a"><title>Realidade ou Cyberpunk? | BLACKWALL</title>
+<link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/jogos.css"><link rel="stylesheet" href="css/jogos-suave.css"></head>
+<body class="game-body reality-page"><header class="site-nav game-nav">
+      <a class="brand" href="index.html">BW_</a>
+      <nav aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="blackwall.html">Blackwall</a>
+        <a href="cyberpunk.html">Cyberpunk</a>
+        <a href="index.html#interativos">Interativos</a>
+        <a href="dashboard.html">Dashboard</a>
+      </nav>
+    </header>
+<main id="conteudo"><div class="game-background reality-bg"></div>
+<section class="game-screen reality-screen">
+  <div class="play-shell" id="painel_inicio">
+    <div class="play-visual"><img src="assets/arte_cyberpunk_moto.webp" alt="Cena do universo Cyberpunk"></div>
+    <div class="play-copy"><p class="small-code">// REALIDADE OU CYBERPUNK?</p><h1>Realidade ou Cyberpunk?</h1><p>12 perguntas. Seis fatos, seis ficções.</p><button class="action-btn" onclick="iniciarRealidade()">COMEÇAR ↗</button></div>
+  </div>
+  <div class="question-shell" style="display:none" id="painel_questao">
+    <div class="question-head"><span class="small-code" id="categoria">// TEMA</span><span class="small-code" id="contador">01 / 12</span></div>
+    <div class="progress-track"><div id="progresso" class="progress-fill"></div></div>
+    <h2 id="pergunta">Carregando...</h2>
+    <div class="choice-grid" id="alternativas"><button onclick="responderRealidade('realidade')">REALIDADE <span>↗</span></button><button onclick="responderRealidade('ficcao')">CYBERPUNK <span>↗</span></button></div>
+    <div id="feedback" class="feedback-box" style="display:none" aria-live="polite"></div>
+    <button id="proxima" class="action-btn" style="display:none" onclick="proximaPergunta()">PRÓXIMA ↗</button>
+  </div>
+  <div class="result-shell" style="display:none" id="painel_final"><p class="small-code">// RESULTADO</p><h2>Sua análise<span>.</span></h2><div class="result-number" id="resultado_numero">0/12</div><p id="resultado_texto"></p><div class="result-actions"><button class="action-btn" onclick="iniciarRealidade()">JOGAR DE NOVO ↗</button><a class="action-btn action-outline" href="dashboard.html">VER RESULTADOS ↗</a></div></div>
+  <p class="game-error" id="mensagem" role="alert"></p>
+</section></main>
+<footer class="game-footer"><span>BLACKWALL // ARQUIVOS DE NIGHT CITY</span><a href="index.html">VOLTAR AO INÍCIO ↗</a></footer>
+<script src="js/realidade.js"></script></body></html>

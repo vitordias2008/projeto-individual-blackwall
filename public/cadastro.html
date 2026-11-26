@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cadastrar | BLACKWALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="conta">
+    <header class="site-nav">
+        <a class="brand" href="index.html">BW_</a>
+        <nav><a href="index.html">Início</a></nav>
+    </header>
+    <main>
+        <form onsubmit="cadastrar(); return false" novalidate>
+            <h1>Cadastrar<em>_</em></h1>
+            <p>Crie sua conta para jogar e guardar suas partidas.</p>
+            <label for="ipt_nome">Nome</label>
+            <input id="ipt_nome" type="text" maxlength="80" autocomplete="name">
+            <label for="ipt_email">E-mail</label>
+            <input id="ipt_email" type="email" maxlength="160" autocomplete="email">
+            <label for="ipt_senha">Senha</label>
+            <input id="ipt_senha" type="password" maxlength="128" autocomplete="new-password" oninput="validarSenha()">
+            <p id="senha_mensagem" aria-live="polite">8 caracteres, maiúscula, minúscula, número e símbolo.</p>
+            <label for="ipt_confirmar">Confirme a senha</label>
+            <input id="ipt_confirmar" type="password" maxlength="128" autocomplete="new-password">
+            <p id="mensagem" role="status"></p>
+            <button class="cta" id="btn_conta">Criar conta ↗</button>
+            <a id="trocar" href="login.html">Já tenho uma conta</a>
+        </form>
+    </main>
+    <script>
+        var destino = "dashboard.html";
+        if (location.search == "?destino=realidade.html") {
+            destino = "realidade.html";
+        } else if (location.search == "?destino=senha.html") {
+            destino = "senha.html";
+        }
+        if (location.protocol == "file:") {
+            window.location = "http://127.0.0.1:3333/cadastro.html?destino=" + destino;
+        }
+        trocar.href = "login.html?destino=" + destino;
+
+        function senhaForte(senha) {
+            var maiuscula = false;
+            var minuscula = false;
+            var numero = false;
+            var simbolo = false;
+            var simbolos = "!@#$%&*()-_+=?.,;:/<>[]{}|~^`'\"";
+
+            for (var i = 0; i < senha.length; i++) {
+                var letra = senha[i];
+
+                if (letra >= "A" && letra <= "Z") {
+                    maiuscula = true;
+                } else if (letra >= "a" && letra <= "z") {
+                    minuscula = true;
+                } else if (letra >= "0" && letra <= "9") {
+                    numero = true;
+                } else if (simbolos.indexOf(letra) >= 0) {
+                    simbolo = true;
+                }
+            }
+
+            var erros = "";
+            if (senha.length < 8) erros += "8 caracteres ou mais; ";
+            if (maiuscula == false) erros += "uma letra maiúscula; ";
+            if (minuscula == false) erros += "uma letra minúscula; ";
+            if (numero == false) erros += "um número; ";
+            if (simbolo == false) erros += "um símbolo; ";
+
+            return erros;
+        }
+
+        function validarSenha() {
+            var erros = senhaForte(ipt_senha.value);
+            if (erros == "") {
+                senha_mensagem.style.color = "#80dfac";
+                senha_mensagem.innerHTML = "Senha forte!";
+                return true;
+            } else {
+                senha_mensagem.style.color = "#ffacbb";
+                senha_mensagem.innerHTML = "Senha fraca. Falta: " + erros;
+                return false;
+            }
+        }
+
+        function cadastrar() {
+            var nome = ipt_nome.value;
+            var email = ipt_email.value;
+            var senha = ipt_senha.value;
+            var confirmar = ipt_confirmar.value;
+            mensagem.innerHTML = "";
+
+            if (nome.trim() == "" || email == "" || senha == "" || confirmar == "") {
+                mensagem.innerHTML = "Preencha todos os campos.";
+            } else if (email.indexOf("@") < 1 || email.lastIndexOf(".") <= email.indexOf("@") + 1 || email.indexOf(" ") >= 0 || email[email.length - 1] == ".") {
+                mensagem.innerHTML = "Insira um e-mail válido.";
+            } else if (validarSenha() == false) {
+                mensagem.innerHTML = "Sua senha não atende aos requisitos.";
+            } else if (senha != confirmar) {
+                mensagem.innerHTML = "As senhas precisam ser iguais.";
+            } else {
+                btn_conta.disabled = true;
+                fetch("/usuarios/cadastrar", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ nomeServer: nome, emailServer: email, senhaServer: senha })
+                }).then(function (resposta) {
+                    if (resposta.ok) {
+                        window.location = "login.html?destino=" + destino;
+                    } else if (resposta.status == 409) {
+                        mensagem.innerHTML = "Este e-mail já está cadastrado.";
+                        btn_conta.disabled = false;
+                    } else {
+                        resposta.text().then(function (texto) {
+                            mensagem.textContent = texto;
+                        });
+                        btn_conta.disabled = false;
+                    }
+                }).catch(function () {
+                    mensagem.innerHTML = "Não foi possível conectar ao servidor.";
+                    btn_conta.disabled = false;
+                });
+            }
+        }
+    </script>
+</body>
+</html>

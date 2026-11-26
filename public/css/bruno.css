@@ -1,0 +1,62 @@
+.memorial { --margem: max(6vw, calc((100% - 1160px)/2)); background: #081820; }
+.memorial h2 { font-size: clamp(33px,4.1vw,62px); }
+.foto-memoria { display: block; border: 0; padding: 0; cursor: zoom-in; background: #173039; }
+.foto-memoria img { width: 100%; display: block; aspect-ratio: 4/3; object-fit: cover; }
+.foto-memoria:focus-visible { outline: 4px solid #ecdd66; outline-offset: -4px; }
+.abertura-bruno {
+  position: relative; isolation: isolate; min-height: 94svh;
+  display: flex; align-items: end; padding: 116px var(--margem) clamp(45px,7vw,100px);
+}
+.abertura-bruno .foto-memoria { position: absolute; inset: 0; width: 100%; height: 100%; z-index: -2; }
+.abertura-bruno img { height: 100%; object-position: center 42%; }
+.abertura-bruno::after {
+  content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(0deg,#081820, transparent 65%),linear-gradient(90deg,#041018eb,#04101883 50%,transparent 85%);
+}
+.abertura-bruno > div { max-width: 490px; }
+.voltar { display: inline-block; margin-bottom: 34px; font: 13px monospace; color: #bad4d3; }
+.memorial section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(32px, 6vw, 84px);
+  padding: clamp(52px, 7vw, 96px) var(--margem);
+}
+.memorial section .foto-memoria { width: 100%; }
+.infancia { scroll-margin-top: 60px; }
+.memorial .night-city {
+  display: grid;
+  background: linear-gradient(90deg,#07121af5,#141d23cd),url("../assets/faixa_cidade_vermelha.webp") center/cover;
+}
+.night-city > div { max-width: 62ch; }
+.projeto img { aspect-ratio: 4 / 5; }
+.bilhete {
+  position: relative;
+  padding: clamp(26px,3.5vw,54px);
+  background: linear-gradient(135deg,#f3efdf,#e7e2ce);
+  color: #233931;
+  box-shadow: 0 12px 28px #0003;
+}
+.bilhete::after {
+  content: ""; position: absolute; right: 0; top: 0; width: 22px; height: 22px;
+  background: linear-gradient(45deg,#cbc7b3 49%,#081820 51%);
+}
+.memorial .bilhete p { color: #374139; font-size: clamp(16px,1.15vw,18px); line-height: 1.65; }
+.memorial .bilhete .destinatario {
+  margin: 0 0 20px; padding-bottom: 12px; border-bottom: 1px solid #afb4a2;
+  font: 13px/1.4 monospace; color: #42655c;
+}
+.memorial .bilhete h2 { font: italic clamp(38px,4vw,58px)/1.06 Georgia,serif; letter-spacing: -.04em; }
+.memorial .bilhete .assinatura { margin: 24px 0 0; font: italic 32px/1.2 Georgia,serif; color: #28524b; }
+.assinatura span { display: block; margin-bottom: 4px; font: 15px/1.4 Georgia,serif; }
+.carta-coluna > a { margin-top: 14px; }
+@media(max-width:700px) {
+  .memorial { --margem: 24px; }
+  .abertura-bruno { min-height: 78svh; padding-top: 64px; }
+  .memorial section { grid-template-columns: 1fr; gap: 20px; }
+}
+#ampliacao { width: min(900px,94vw); padding: 16px; background: #11282f; border: 1px solid #70949a; color: #e8e8db; }
+#ampliacao::backdrop { background: #020a0ee8; }
+#ampliacao img { display: block; width: 100%; height: min(65svh,660px); object-fit: contain; margin: 8px 0; }
+#ampliacao div { display: flex; align-items: center; justify-content: space-between; }
+#ampliacao button { background: #193d46; color: white; min-height: 44px; min-width: 48px; border: 1px solid #70949a; cursor: pointer; }

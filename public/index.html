@@ -12,14 +12,16 @@
   <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 
   <header class="site-nav">
-    <a class="brand" href="#inicio">BW_</a>
-    <nav>
-      <a href="#inicio">Início</a>
-      <a href="#portais">Arquivos</a>
-      <a href="#blackwall">Blackwall</a>
-      <a href="#cyberpunk">Cyberpunk</a>
-      <a href="#interativos">Interativos</a>
-      <a href="#trajetoria">Minha trajetória</a>
+    <a class="brand" href="index.html" aria-label="BLACKWALL — página inicial">BW_</a>
+    <nav aria-label="Navegação principal">
+      <a href="index.html" aria-current="page">Início</a>
+      <a href="index.html#portais">Arquivos</a>
+      <a href="blackwall.html">Blackwall</a>
+      <a href="cyberpunk.html">Cyberpunk</a>
+      <a href="index.html#interativos">Interativos</a>
+      <a href="socio.html">Minha conexão</a>
+      <a href="dashboard.html">Dashboard</a>
+      <a href="login.html">Entrar</a>
     </nav>
   </header>
 
@@ -40,17 +42,17 @@
         <h2 class="section-logo"><img src="assets/logo_blackwall.png" alt="BLACKWALL"></h2>
         <div class="portal-grid">
           <article class="portal side">
-            <a class="poster" href="#cyberpunk"><img src="assets/banner_cyberpunk.webp" alt="Banner Cyberpunk"></a>
+            <a class="poster" href="cyberpunk.html"><img src="assets/banner_cyberpunk.webp" alt="Banner Cyberpunk"></a>
             <p>Em Night City, tecnologia e sobrevivência caminham juntas. Conheça o universo de Cyberpunk 2077.</p>
           </article>
 
           <article class="portal main">
-            <a class="poster" href="#blackwall"><img src="assets/banner_blackwall.webp" alt="Banner Blackwall"></a>
+            <a class="poster" href="blackwall.html"><img src="assets/banner_blackwall.webp" alt="Banner Blackwall"></a>
             <p>A Blackwall é a fronteira digital que separa a rede conhecida do que existe além dela.</p>
           </article>
 
           <article class="portal side">
-            <a class="poster" href="#trajetoria"><img src="assets/banner_minha_conexao.webp" alt="Banner Minha Conexão"></a>
+            <a class="poster" href="socio.html"><img src="assets/banner_minha_conexao.webp" alt="Banner Minha Conexão"></a>
             <p>Um espaço para mostrar como esse universo se conecta à minha trajetória e às pessoas ao meu redor.</p>
           </article>
         </div>
@@ -60,21 +62,23 @@
 
     <section class="interactive section" id="interativos">
       <div class="container interactive-container">
-        <details class="interactive-details">
-          <summary>INTERAJA COM A GENTE</summary>
-          <div class="interactive-grid">
-            <div class="interactive-card">
-              <span>// CYBERPUNK</span>
-              <h3>Em breve</h3>
-              <p>Espaço reservado para quizzes, mapas, escolhas e minigames do universo Cyberpunk.</p>
-            </div>
-            <div class="interactive-card">
-              <span>// BLACKWALL</span>
-              <h3>Em breve</h3>
-              <p>Espaço reservado para experiências sobre a Blackwall, IAs e eventos do outro lado da rede.</p>
-            </div>
-          </div>
-        </details>
+        <p class="section-eyebrow" style="color:#ec7788">// ACESSO AOS DESAFIOS</p>
+        <h2 class="interactive-title">Interaja com o futuro<span>.</span></h2>
+        <p class="interactive-intro">Duas experiências curtas para explorar o que a ficção revela sobre a nossa tecnologia. Entre na sua conta para jogar e acompanhar seus resultados na dashboard.</p>
+        <div class="interactive-grid interactive-grid--open">
+          <a class="interactive-card interactive-card--link" href="login.html?destino=realidade.html">
+            <span>// 01 · CONHECIMENTO</span>
+            <h3>Realidade ou Cyberpunk?</h3>
+            <p>12 casos improváveis. Seis aconteceram de verdade. Seis são extrapolações.</p>
+            <strong>INICIAR DESAFIO <span aria-hidden="true">↗</span></strong>
+          </a>
+          <a class="interactive-card interactive-card--link" href="login.html?destino=senha.html">
+            <span>// 02 · CIBERSEGURANÇA</span>
+            <h3>O Jogo da Senha</h3>
+            <p>Monte uma senha fictícia enquanto novas regras de segurança aparecem a cada etapa.</p>
+            <strong>INICIAR DESAFIO <span aria-hidden="true">↗</span></strong>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -86,7 +90,7 @@
           <h2 id="blackwall-title">A barreira entre controle<br>e o desconhecido</h2>
           <p>Após o colapso da antiga rede, a Blackwall foi criada para separar a parte monitorada daquilo que já não responde mais à lógica humana.</p>
           <p>Mais do que um sistema de defesa, ela representa o limite entre aquilo que ainda controlamos e aquilo que existe além da nossa compreensão.</p>
-          <a class="btn btn-outline" href="#cyberpunk">Descubra</a>
+          <a class="btn btn-outline" href="blackwall.html">Descubra</a>
         </div>
       </div>
       <div class="divider-skyline divider-skyline-top"></div>
@@ -100,7 +104,7 @@
         <p class="cyberpunk-lead">Tecnologia, poder e humanidade em conflito.</p>
         <p>Cyberpunk é um universo de futuros tecnológicos em que grandes corporações acumulam poder, enquanto pessoas comuns tentam encontrar seu lugar.</p>
         <p>Em <strong>Night City</strong>, implantes modificam o corpo e a tecnologia faz parte de quase tudo. Mas, por trás das luzes e das máquinas, as histórias continuam sendo sobre escolhas, liberdade e sobrevivência.</p>
-        <a class="btn btn-cyberpunk" href="#historias">Conhecer o universo <span aria-hidden="true">↗</span></a>
+        <a class="btn btn-cyberpunk" href="cyberpunk.html">Conhecer o universo <span aria-hidden="true">↗</span></a>
       </div>
       <div class="cyberpunk-art">
         <img src="assets/arte_cyberpunk_moto.webp" alt="Arte Cyberpunk com personagem em moto">
@@ -117,7 +121,8 @@
         <p>Para mim, começou com Edgerunners. Entre os sonhos de David e Lucy, encontrei uma história que continuou comigo depois do último episódio.</p>
         <p>Mais do que a cidade e a tecnologia, foram os vínculos, as escolhas e a vontade de pertencer que me aproximaram desse universo.</p>
         <p>BLACKWALL nasceu dessa conexão: transformar o que uma história despertou em algo que outras pessoas possam explorar.</p>
-        <a class="btn btn-dark" href="#trajetoria">Minha conexão</a>
+        <a class="btn btn-dark" href="socio.html">Minha conexão</a>
+        <a class="btn btn-dark" href="socio.html#meu-desafio">Meu desafio no projeto</a>
       </div>
     </section>
 
@@ -128,70 +133,57 @@
         <h2 id="trajetoria-title">MINHA TRAJETÓRIA</h2>
       </div>
 
-      <!-- Carrossel CSS puro, sem lógica no JavaScript. Fotos/narrativas definitivas pendentes. -->
+      
       <div class="trajectory-carousel">
-        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-1" checked>
-        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-2">
-        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-3">
+        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-1" aria-label="Meu irmão" checked>
+        <input class="carousel-radio" type="radio" name="pessoa" id="perfil-2" aria-label="Meus colegas da SPTech">
 
         <article class="trajectory-card profile-one" aria-label="Meu irmão">
           <div class="trajectory-card-top"><span>BLACKWALL PROJEKT</span><span aria-hidden="true">◉</span></div>
           <div class="trajectory-card-body">
             <div class="trajectory-image">
-              <img src="assets/card_referencia_provisorio.webp" alt="Imagem provisória usada apenas como referência do layout do carrossel">
-              <span class="photo-indicator">IMAGEM PROVISÓRIA — FOTO PENDENTE</span>
+              <img src="assets/historias_night_city.webp" alt="David e Lucy observando Night City">
             </div>
             <div class="trajectory-info">
               <span class="name-kicker">// ARQUIVO PESSOAL 01</span>
               <h3>MEU IRMÃO</h3>
-              <p class="relation">FAMÍLIA · RPG · CYBERPUNK</p>
-              <p>Meu irmão tem um papel importante na minha conexão com Cyberpunk. Foi com ele que explorei mais o RPG e passei a conhecer outras partes desse universo, além do anime e do jogo. Essa troca de interesses e histórias ajudou a transformar algo de que gosto em um projeto pessoal.</p>
-              <details class="person-details"><summary>Conheça mais <span aria-hidden="true">↗</span></summary><p>Compartilhar esse universo com meu irmão é parte do motivo pelo qual quis criar o BLACKWALL: apresentar a outras pessoas um pouco das histórias e ideias que despertaram meu interesse.</p></details>
+              <p class="relation">FAMÍLIA · TECNOLOGIA</p>
+              <p>Meu irmão faz parte do meu interesse por tecnologia desde a infância. Quando penso no caminho que me trouxe até a SPTech, ele está no começo dessa história.</p>
+              <a class="chamada-pessoa" href="bruno.html">Conhecer nossa história ↗</a>
             </div>
           </div>
           <div class="trajectory-card-bottom">ARQUIVO PESSOAL // MEU IRMÃO <span aria-hidden="true">↥</span></div>
-          <label class="arrow-btn arrow-left" for="perfil-3" aria-label="Ver perfil anterior">←</label>
+          <label class="arrow-btn arrow-left" for="perfil-2" aria-label="Ver perfil anterior">←</label>
           <label class="arrow-btn arrow-right" for="perfil-2" aria-label="Ver próximo perfil">→</label>
         </article>
 
-        <article class="trajectory-card profile-two" aria-label="Perfil 2">
+        <article class="trajectory-card profile-two" aria-label="Meus colegas da SPTech">
           <div class="trajectory-card-top"><span>BLACKWALL PROJEKT</span><span aria-hidden="true">◉</span></div>
           <div class="trajectory-card-body">
-            <div class="trajectory-image image-placeholder"><span>02</span><small>FOTO A DEFINIR</small></div>
+            <div class="trajectory-image"><img src="assets/antiga-rede.webp" alt="Paisagem urbana de Night City"></div>
             <div class="trajectory-info">
-              <span class="name-kicker">NAME //</span>
-              <h3>[NOME DA PESSOA]</h3>
-              <p class="relation">RELAÇÃO</p>
-              <p>Imagem e informações reservadas para a segunda pessoa da sua trajetória.</p>
-              <details class="person-details"><summary>Conheça mais <span aria-hidden="true">↗</span></summary><p>Conteúdo pendente das suas informações.</p></details>
+              <span class="name-kicker">// ARQUIVO PESSOAL 02</span>
+              <h3>MEUS COLEGAS DA SPTECH</h3>
+              <p class="relation">FACULDADE · APOIO</p>
+              <p>Teve semana em que foi difícil acompanhar o projeto e as outras matérias. Conversar com meus colegas nessas horas fez diferença pra mim.</p>
+              <div class="links-colegas" aria-label="Agradecimentos aos colegas">
+                <a class="chamada-pessoa" href="pessoas.html#kaua">Kauã ↗</a>
+                <a class="chamada-pessoa" href="pessoas.html#otavio">Otávio ↗</a>
+                <a class="chamada-pessoa" href="pessoas.html#pedro">Pedro G. ↗</a>
+                <a class="chamada-pessoa" href="pessoas.html#gregory">Gregory ↗</a>
+              </div>
             </div>
           </div>
-          <div class="trajectory-card-bottom">ARQUIVO PESSOAL // 02 <span aria-hidden="true">↥</span></div>
+          <div class="trajectory-card-bottom">ARQUIVO PESSOAL // SPTECH <span aria-hidden="true">↥</span></div>
           <label class="arrow-btn arrow-left" for="perfil-1" aria-label="Ver perfil anterior">←</label>
-          <label class="arrow-btn arrow-right" for="perfil-3" aria-label="Ver próximo perfil">→</label>
-        </article>
-
-        <article class="trajectory-card profile-three" aria-label="Perfil 3">
-          <div class="trajectory-card-top"><span>BLACKWALL PROJEKT</span><span aria-hidden="true">◉</span></div>
-          <div class="trajectory-card-body">
-            <div class="trajectory-image image-placeholder"><span>03</span><small>FOTO A DEFINIR</small></div>
-            <div class="trajectory-info">
-              <span class="name-kicker">NAME //</span>
-              <h3>[NOME DA PESSOA]</h3>
-              <p class="relation">RELAÇÃO</p>
-              <p>Imagem e informações reservadas para a terceira pessoa da sua trajetória.</p>
-              <details class="person-details"><summary>Conheça mais <span aria-hidden="true">↗</span></summary><p>Conteúdo pendente das suas informações.</p></details>
-            </div>
-          </div>
-          <div class="trajectory-card-bottom">ARQUIVO PESSOAL // 03 <span aria-hidden="true">↥</span></div>
-          <label class="arrow-btn arrow-left" for="perfil-2" aria-label="Ver perfil anterior">←</label>
           <label class="arrow-btn arrow-right" for="perfil-1" aria-label="Ver próximo perfil">→</label>
         </article>
-        <div class="carousel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+
+        <div class="carousel-dots" aria-hidden="true"><span></span><span></span></div>
       </div>
     </section>
   </main>
 
-  <script src="js/script.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Entrar | BLACKWALL</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="conta">
+    <header class="site-nav">
+        <a class="brand" href="index.html">BW_</a>
+        <nav><a href="index.html">Início</a></nav>
+    </header>
+    <main>
+        <form onsubmit="enviarConta(); return false">
+            <h1>Entrar<em>_</em></h1>
+            <p>Acesse seus jogos e resultados.</p>
+            <label for="ipt_email">E-mail</label>
+            <input id="ipt_email" type="email" maxlength="160" autocomplete="email" required>
+            <label for="ipt_senha">Senha</label>
+            <input id="ipt_senha" type="password" maxlength="128" autocomplete="current-password" required>
+            <p id="mensagem" role="status"></p>
+            <button class="cta" id="btn_conta">Entrar ↗</button>
+            <a id="trocar" href="cadastro.html">Criar minha conta</a>
+        </form>
+    </main>
+    <script>
+        var destino = "dashboard.html";
+        if (location.search == "?destino=realidade.html") destino = "realidade.html";
+        if (location.search == "?destino=senha.html") destino = "senha.html";
+        if (location.protocol == "file:") {
+            window.location = "http://127.0.0.1:3333/login.html?destino=" + destino;
+        }
+        trocar.href = "cadastro.html?destino=" + destino;
+        function enviarConta() {
+            var email = ipt_email.value;
+            var senha = ipt_senha.value;
+            if (email == "" || senha == "") {
+                mensagem.innerHTML = "Preencha todos os campos.";
+                return;
+            }
+            btn_conta.disabled = true;
+            fetch("/usuarios/autenticar", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ emailServer: email, senhaServer: senha })
+            }).then(function (resposta) {
+                if (resposta.ok) {
+                    resposta.json().then(function (usuario) {
+                        sessionStorage.ID_USUARIO = usuario.id;
+                        sessionStorage.NOME_USUARIO = usuario.nome;
+                        sessionStorage.EMAIL_USUARIO = usuario.email;
+                        sessionStorage.APELIDO_USUARIO = usuario.apelido || "";
+                        window.location = destino;
+                    });
+                } else {
+                    if (resposta.status == 403) {
+                        mensagem.innerHTML = "E-mail ou senha incorretos.";
+                    } else {
+                        resposta.text().then(function (texto) {
+                            mensagem.textContent = texto;
+                        });
+                    }
+                    btn_conta.disabled = false;
+                }
+            }).catch(function () {
+                mensagem.innerHTML = "Não foi possível conectar ao servidor.";
+                btn_conta.disabled = false;
+            });
+        }
+    </script>
+</body>
+</html>

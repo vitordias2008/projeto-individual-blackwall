@@ -1,0 +1,159 @@
+.pagina {
+  --acento: #fcee0a;
+  --espaco: clamp(24px, 8vw, 132px);
+  background: #06141a;
+}
+.socio-page {
+  --acento: #9bcad0;
+}
+.pagina .site-nav {
+  background: #051017ed;
+}
+.pagina nav a[aria-current] {
+  color: var(--acento);
+}
+.abertura {
+  min-height: 100svh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding: 110px var(--espaco) 70px;
+}
+.abertura-texto {
+  position: relative;
+  z-index: 1;
+  max-width: min(41vw, 570px);
+}
+.marca-jogo {
+  width: clamp(128px, 15vw, 220px);
+  margin-bottom: 22px;
+}
+.pagina h1,
+.pagina h2 {
+  margin: 0;
+  line-height: 0.96;
+  letter-spacing: -0.055em;
+}
+.pagina h1 {
+  font-size: clamp(56px, 7vw, 116px);
+}
+.pagina h2 {
+  font-size: clamp(36px, 4.9vw, 74px);
+  margin-bottom: 24px;
+}
+.pagina main p {
+  line-height: 1.65;
+  font-size: clamp(16px, 1.25vw, 20px);
+  color: #c9d8da;
+}
+.pagina main .etiqueta,
+.chamada,
+.pagina footer {
+  font: 12px/1.45 monospace;
+  letter-spacing: 0.1em;
+}
+.pagina main .etiqueta {
+  margin: 0 0 20px;
+  color: var(--acento);
+}
+.chamada {
+  display: inline-block;
+  color: var(--acento);
+  border-bottom: 1px solid;
+  padding: 12px 0;
+}
+.ilustracao {
+  position: absolute;
+  right: 0;
+  width: 49%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 54% center;
+  clip-path: polygon(13% 0, 100% 0, 100% 100%, 0 100%);
+}
+.lua {
+  background:
+    linear-gradient(90deg, #051016f5, #0510169c 43%, transparent 78%),
+    url("../assets/fundo_minha_trajetoria.webp") center/cover;
+}
+.leitura,
+.destinos {
+  padding: clamp(64px, 9vw, 144px) var(--espaco);
+}
+.bloco {
+  max-width: 760px;
+  margin: auto;
+}
+.origem {
+  background: #bec031;
+  color: #000000;
+}
+.pagina .origem p,
+.pagina .origem .etiqueta {
+  color: #000000;
+}
+.dupla {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background: #091b22;
+  min-height: 100svh;
+}
+.dupla img {
+  width: 100%;
+  height: 100svh;
+  object-fit: cover;
+}
+.dupla > div {
+  padding: clamp(35px, 5vw, 92px);
+}
+.anime {
+  background:
+    linear-gradient(90deg, #04131afb, #04131ad6 49%, #04131a48),
+    url("../assets/anime_cyberpunk.png") center/cover;
+}
+.anime .bloco {
+  margin: 0;
+  max-width: 570px;
+}
+.destinos {
+  background: #10262e;
+}
+.destinos p {
+  max-width: 70ch;
+}
+.destinos a,
+.pagina summary {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  align-items: center;
+  padding: 20px 0;
+  border-bottom: 1px solid #47636b;
+  font-size: clamp(18px, 2vw, 30px);
+}
+.destinos a span,
+.pagina summary::after {
+  color: var(--acento);
+}
+.pagina summary {
+  cursor: pointer;
+}
+.pagina summary::after {
+  content: "+";
+}
+.pagina details[open] summary::after {
+  content: "−";
+}
+.pagina footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 30px var(--espaco);
+}
+.pagina a:hover,
+.pagina summary:hover {
+  color: var(--acento);
+}
+
+#meu-desafio { scroll-margin-top: 80px; }
